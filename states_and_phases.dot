@@ -7,6 +7,7 @@ digraph StatesAndPhases {
     ranksep=0.5; // Revert rank separation
     node [shape=Mrecord, style="filled", fillcolor="white", fontname="sans-serif", fontsize=12, color="black", penwidth=1.5]; // Node styling with subtle border
     edge [fontname="sans-serif", fontsize=10, color="black"]; // Edge styling
+    graph [bgcolor="transparent"]; // Set graph background to transparent
 
     // Nodes with fulfillment criteria using HTML-like labels
     "Initializing" [label=<

@@ -3,6 +3,7 @@ digraph OperationalFlow {
     rankdir=LR; // Left to Right
     node [shape=box, style="filled", fillcolor="#f0f0f0", fontname="sans-serif", fontsize=12]; // Node styling
     edge [fontname="sans-serif", fontsize=10]; // Edge styling
+    graph [bgcolor="transparent"]; // Set graph background to transparent
 
     // Nodes
     "1: Create Project" [label="1: Create Project"];

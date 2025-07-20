@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Random Itch</title>
+    <link>https://niklas-olsson.github.io/tags/</link>
+    <description>Recent content in Tags on Random Itch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://niklas-olsson.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Content Management</title>
+      <link>https://niklas-olsson.github.io/tags/content-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://niklas-olsson.github.io/tags/content-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Organization</title>
+      <link>https://niklas-olsson.github.io/tags/organization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://niklas-olsson.github.io/tags/organization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Development</title>
+      <link>https://niklas-olsson.github.io/tags/web-development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://niklas-olsson.github.io/tags/web-development/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

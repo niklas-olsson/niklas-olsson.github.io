@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Development on Random Itch</title>
+    <link>https://niklas-olsson.github.io/tags/web-development/</link>
+    <description>Recent content in Web Development on Random Itch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://niklas-olsson.github.io/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Categories vs. Tags - Organizing Your Digital Waypoints</title>
+      <link>https://niklas-olsson.github.io/insights/categories-vs-tags/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://niklas-olsson.github.io/insights/categories-vs-tags/</guid>
+      <description>When curating a collection of resources, such as the &amp;ldquo;Waypoints&amp;rdquo; on this site, a common question arises: how best to organize them? Two primary methods often come to mind: categories and tags.&#xA;While seemingly similar, they serve distinct purposes and offer different levels of granularity for content organization and discoverability.&#xA;Categories: Broad Buckets for Primary Classification Categories are best thought of as broad, mutually exclusive groups. Each item typically belongs to one, and only one, category.</description>
+    </item>
+  </channel>
+</rss>
