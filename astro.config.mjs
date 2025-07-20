@@ -5,5 +5,5 @@ import svelte from '@astrojs/svelte';
 export default defineConfig({
   integrations: [svelte()],
   output: 'static',
-  outDir: './dist',
+  outDir: './docs',
 });

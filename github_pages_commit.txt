@@ -1,0 +1,5 @@
+chore: Configure for GitHub Pages deployment
+
+- Removed `dist/` from .gitignore to allow tracking of built site.
+- Ensured Astro is configured for static output.
+- Built the project to generate static files in `dist/`.
