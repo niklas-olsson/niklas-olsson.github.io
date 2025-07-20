@@ -50,7 +50,7 @@
 	{{- end }}
 	{{- partial "mathjax.html" . -}}
 	{{- partial "mermaid.html" . -}}
-	{{- if templates.Exists "partials/extra-foot.html" -}}{{- partial "extra-foot.html" . -}}{{- end }}
+	{{- if templates.Exists "partials/extra-head.html" -}}{{- partial "extra-head.html" . -}}{{- end }}
 	{{- if .HasShortcode "gallery" -}}
 		{{- if and .Site.Params.gallery .Site.Params.gallery.enable -}}
 			{{- $galleryJS := resources.Get "js/gallery.js" -}}
