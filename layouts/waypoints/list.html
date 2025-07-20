@@ -1,0 +1,23 @@
+{{ define "header" }}
+{{ partialCached "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <main class="site-main section-inner thin">
+    <h1>{{ .Title }}</h1>
+    <div class="content">
+      <p>A collection of interesting places on the web:</p>
+      <ul>
+        {{ range .Site.Data.waypoints.waypoints }}
+          <li>
+            <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+            <p>{{ .description }}</p>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </main>
+{{ end }}
+
+{{ define "footer" }}<footer id="site-footer" class="section-inner thin {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">{{- if templates.Exists "partials/list-footer.html" -}}{{- partialCached "list-footer.html" . -}}{{- else -}}{{- partial "footer.html" . -}}{{- end -}}</footer>
+{{ end }}

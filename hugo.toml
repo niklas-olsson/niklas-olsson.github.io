@@ -1,0 +1,30 @@
+baseURL = "https://niklas-olsson.github.io/"
+languageCode = "en-us"
+title = "Random Itch"
+theme = "hermit-v2"
+
+[params]
+  [params.author]
+  name = "Niklas Olsson"
+  description = "A collection of distilled wisdom, conclusions, and reviews."
+  homeSubtitle = "A collection of distilled wisdom, conclusions, and reviews."
+  footerCopyright = "© 2025"
+  code_copy_button = true
+  scrollToTop = true
+  readTime = true
+  listLayout = ["description", "tags", "description"]
+  custom_css = ["css/custom.css"]
+
+[menu]
+  [[menu.main]]
+    name = "Insights"
+    url = "/insights"
+    weight = 10
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects"
+    weight = 20
+  [[menu.main]]
+    name = "Waypoints"
+    url = "/waypoints"
+    weight = 30

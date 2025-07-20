@@ -1,0 +1,35 @@
+[[waypoints]]
+title = "Hugging Face"
+url = "https://huggingface.co/"
+description = "The AI community building the future."
+category = "AI/ML"
+
+[[waypoints]]
+title = "TensorFlow"
+url = "https://www.tensorflow.org/"
+description = "An open-source machine learning platform."
+category = "AI/ML"
+
+[[waypoints]]
+title = "PyTorch"
+url = "https://pytorch.org/"
+description = "An open-source machine learning framework."
+category = "AI/ML"
+
+[[waypoints]]
+title = "arXiv"
+url = "https://arxiv.org/"
+description = "Open-access to e-prints in physics, mathematics, computer science, etc."
+category = "Research"
+
+[[waypoints]]
+title = "Kubernetes"
+url = "https://kubernetes.io/"
+description = "Open-source system for automating deployment, scaling, and management of containerized applications."
+category = "DevOps"
+
+[[waypoints]]
+title = "Slurm Workload Manager"
+url = "https://slurm.schedmd.com/"
+description = "An open-source workload manager for Linux clusters."
+category = "DevOps"
