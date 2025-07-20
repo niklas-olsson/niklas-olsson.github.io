@@ -8,8 +8,8 @@ publishDir = "docs"
   [params.author]
   name = "Niklas Olsson"
   description = "A collection of distilled wisdom, conclusions, and reviews."
-  homeSubtitle = "A collection of distilled wisdom, conclusions, and reviews."
   footerCopyright = "© 2025"
+  
   code_copy_button = true
   scrollToTop = true
   readTime = true

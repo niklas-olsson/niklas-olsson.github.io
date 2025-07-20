@@ -31,3 +31,7 @@
 .tag {
   margin-right: 0.5em; /* Add space between tags */
 }
+
+#home-subtitle {
+  color: #fff; /* Changed to white for better visibility */
+}
