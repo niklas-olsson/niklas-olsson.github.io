@@ -3,12 +3,14 @@
 }
 
 .post-item {
-  padding-bottom: 1em;
-  margin-bottom: 1em;
+  border-top: 1px dashed #ccc;
+  border-bottom: 1px dashed #ccc;
+  padding: 1em 0;
+  margin: 1em 0;
 }
 
 .post-item:last-child {
-  border-bottom: none;
+  border-bottom: 1px dashed #ccc; /* Keep border for last item */
 }
 
 .post-description {
@@ -16,8 +18,16 @@
   margin-top: 0.5em; /* Add some space above the description */
 }
 
-.post-header-wrapper {
-  border-bottom: 1px dashed #ccc;
-  padding-bottom: 0.5em;
-  margin-bottom: 0.5em;
+.tags-wrapper {
+  margin-top: 0.5em;
+}
+
+.tags-label {
+  color: inherit; /* Keep the same color as other text */
+  font-style: normal; /* Remove italic */
+  margin-right: 0.5em;
+}
+
+.tag {
+  margin-right: 0.5em; /* Add space between tags */
 }

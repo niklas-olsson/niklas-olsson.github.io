@@ -1,8 +1,9 @@
 [[waypoints]]
-title = "Hugging Face"
-url = "https://huggingface.co/"
-description = "The AI community building the future."
-category = "AI/ML"
+    title = "Hugging Face"
+    url = "https://huggingface.co/"
+    description = "The AI community building the future."
+    category = "AI/ML"
+    tags = ["models", "community"]
 
 [[waypoints]]
 title = "TensorFlow"

@@ -1,0 +1,46 @@
+{{ define "header" }}
+{{ partialCached "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <main class="site-main section-inner thin">
+    <h1>Tag: {{ .Title }}</h1>
+    <div class="content">
+      <div class="posts-list">
+        {{/* Display content pages (e.g., Insights) with this tag */}}
+        {{ range .Pages }}
+          <div class="post-item">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{- with .Params.description -}}
+              <p>{{ . }}</p>
+            {{- end -}}
+          </div>
+        {{ end }}
+
+        {{/* Display waypoints with this tag */}}
+        {{ range .Site.Data.waypoints.waypoints }}
+          {{- if in .tags $.Title -}}
+            <div class="post-item">
+              <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+              <p>{{ .description }}</p>
+              {{- with .category -}}
+                <span class="category-label">Category: </span><span class="category-value">{{ . }}</span>
+              {{- end -}}
+              {{- with .tags -}}
+                <div class="tags-wrapper">
+                  <span class="tags-label">Tags: </span>
+                  {{- range . -}}
+                    <a href="{{ "tags/" | absLangURL }}{{ . | urlize }}" class="tag">{{- . -}}</a>
+                  {{- end -}}
+                </div>
+              {{- end -}}
+            </div>
+          {{- end -}}
+        {{ end }}
+      </div>
+    </div>
+  </main>
+{{ end }}
+
+{{ define "footer" }}<footer id="site-footer" class="section-inner thin {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">{{- if templates.Exists "partials/list-footer.html" -}}{{- partialCached "list-footer.html" . -}}{{- else -}}{{- partial "footer.html" . -}}{{- end -}}</footer>
+{{ end }}

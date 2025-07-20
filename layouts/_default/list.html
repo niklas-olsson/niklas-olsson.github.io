@@ -14,13 +14,19 @@
 		<div class="posts-list">
 			{{- range .Pages }}
 			<div class="post-item">
-				<div class="post-header-wrapper">
-					<a href="{{.Permalink}}">
-						<span class="post-title">{{.Title}}</span>
-					</a>
-				</div>
+				<a href="{{.Permalink}}">
+					<span class="post-title">{{.Title}}</span>
+				</a>
 				{{- with .Params.description -}}
 				<span class="post-description">{{ . }}</span>
+				{{- end -}}
+				{{- with .Params.tags -}}
+				<div class="tags-wrapper">
+					<span class="tags-label">Tags: </span>
+					{{- range . -}}
+						<a href="{{ "tags/" | absLangURL }}{{ . | urlize }}" class="tag">{{- . -}}</a>
+					{{- end -}}
+				</div>
 				{{- end -}}
 			</div>
 			{{- end }}

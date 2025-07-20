@@ -7,14 +7,25 @@
     <h1>{{ .Title }}</h1>
     <div class="content">
       <p>A collection of interesting places on the web:</p>
-      <ul>
+      <div class="posts-list">
         {{ range .Site.Data.waypoints.waypoints }}
-          <li>
+          <div class="post-item">
             <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
             <p>{{ .description }}</p>
-          </li>
+            {{- with .category -}}
+              <span class="category-label">Category: </span><span class="category-value">{{ . }}</span>
+            {{- end -}}
+            {{- with .tags -}}
+              <div class="tags-wrapper">
+                <span class="tags-label">Tags: </span>
+                {{- range . -}}
+                  <span class="tag">{{ . }}</span> {{/* Removed <a> tag */}}
+                {{- end }}
+              </div>
+            {{- end }}
+          </div>
         {{ end }}
-      </ul>
+      </div>
     </div>
   </main>
 {{ end }}

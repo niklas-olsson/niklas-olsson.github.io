@@ -13,7 +13,7 @@ publishDir = "docs"
   code_copy_button = true
   scrollToTop = true
   readTime = true
-  listLayout = ["description", "tags", "description"]
+  listLayout = ["description", "tags"]
   custom_css = ["css/custom.css"]
 
 [menu]
@@ -29,3 +29,6 @@ publishDir = "docs"
     name = "Waypoints"
     url = "/waypoints"
     weight = 30
+
+[taxonomies]
+  tag = "tags"
