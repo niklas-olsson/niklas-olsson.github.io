@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownLayout.astro
 title: Categories vs. Tags - Organizing Your Digital Waypoints
 description: A discussion on the benefits of categories and tags for organizing content, and when to use each.
 tags: ["organization", "web development", "content management"]
