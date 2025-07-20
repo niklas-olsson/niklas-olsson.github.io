@@ -1,0 +1,32 @@
+{{ define "header" }}
+{{ partialCached "header.html" . }}
+{{ end }}
+
+{{ define "title" }}
+	{{ .Title }}
+{{ end }}
+
+{{ define "main" }}
+	<main class="site-main section-inner thin">
+		<h1>{{ .Title }}</h1>
+		{{- if .Content }}<div class="content">{{ .Content }}</div>{{ end -}}
+
+		<div class="posts-list">
+			{{- range .Pages }}
+			<div class="post-item">
+				<div class="post-header-wrapper">
+					<a href="{{.Permalink}}">
+						<span class="post-title">{{.Title}}</span>
+					</a>
+				</div>
+				{{- with .Params.description -}}
+				<span class="post-description">{{ . }}</span>
+				{{- end -}}
+			</div>
+			{{- end }}
+		</div>
+	</main>
+{{ end }}
+
+{{ define "footer" }}<footer id="site-footer" class="section-inner thin {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">{{- if templates.Exists "partials/list-footer.html" -}}{{- partialCached "list-footer.html" . -}}{{- else -}}{{- partial "footer.html" . -}}{{- end -}}</footer>
+{{ end }}

@@ -1,3 +1,23 @@
 .post-day, .post-year {
   display: none;
 }
+
+.post-item {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-description {
+  display: block;
+  margin-top: 0.5em; /* Add some space above the description */
+}
+
+.post-header-wrapper {
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
