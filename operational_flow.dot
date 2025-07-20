@@ -1,0 +1,18 @@
+digraph OperationalFlow {
+    // Graph settings
+    rankdir=LR; // Left to Right
+    node [shape=box, style="filled", fillcolor="#f0f0f0", fontname="sans-serif", fontsize=12]; // Node styling
+    edge [fontname="sans-serif", fontsize=10]; // Edge styling
+
+    // Nodes
+    "1: Create Project" [label="1: Create Project"];
+    "2: Plan Project" [label="2: Plan Project"];
+    "3: Execute Plan" [label="3: Execute Plan"];
+    "4: Improve" [label="4: Improve"];
+
+    // Edges (connections)
+    "1: Create Project" -> "2: Plan Project";
+    "2: Plan Project" -> "3: Execute Plan";
+    "3: Execute Plan" -> "4: Improve";
+    "4: Improve" -> "2: Plan Project"; // Loop back to Plan Project
+}

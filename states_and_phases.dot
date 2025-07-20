@@ -1,0 +1,54 @@
+digraph StatesAndPhases {
+    // Graph settings
+    rankdir=TB; // Top to Bottom
+    splines=ortho; // Orthogonal (right-angled) edges
+    overlap=false; // Prevent node overlap
+    nodesep=0.5; // Revert node separation
+    ranksep=0.5; // Revert rank separation
+    node [shape=Mrecord, style="filled", fillcolor="white", fontname="sans-serif", fontsize=12, color="black", penwidth=1.5]; // Node styling with subtle border
+    edge [fontname="sans-serif", fontsize=10, color="black"]; // Edge styling
+
+    // Nodes with fulfillment criteria using HTML-like labels
+    "Initializing" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD COLSPAN="2"><U>Initializing</U></TD></TR>
+            <TR><TD ALIGN="LEFT">[ ] Project created</TD></TR>
+            <TR><TD ALIGN="LEFT">[ ] Project defined.</TD></TR>
+        </TABLE>
+    >];
+    "Planning" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD COLSPAN="2"><U>Planning</U></TD></TR>
+            <TR><TD ALIGN="LEFT">[ ] Project definition broken down into actionable tasks.</TD></TR>
+            <TR><TD ALIGN="LEFT">[ ] Task specifications validated against requirements.</TD></TR>
+        </TABLE>
+    >];
+    "Executing" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD COLSPAN="2"><U>Executing</U></TD></TR>
+            <TR><TD ALIGN="LEFT">[ ] Plan implemented</TD></TR>
+            <TR><TD ALIGN="LEFT">[ ] New version running.</TD></TR>
+        </TABLE>
+    >];
+    "Monitoring" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD COLSPAN="2"><U>Monitoring</U></TD></TR>
+            <TR><TD ALIGN="LEFT">[ ] Metrics defined</TD></TR>
+            <TR><TD ALIGN="LEFT">[ ] Data collected.</TD></TR>
+        </TABLE>
+    >];
+    "Improving" [label=<
+        <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0">
+            <TR><TD COLSPAN="2"><U>Improving</U></TD></TR>
+            <TR><TD ALIGN="LEFT">[ ] New insights generated</TD></TR>
+            <TR><TD ALIGN="LEFT">[ ] Feedback loop closed.</TD></TR>
+        </TABLE>
+    >];
+
+    // Edges (transitions) - using xlabel for orthogonal splines
+    "Initializing" -> "Planning" [xlabel="Definition good enough"];
+    "Planning" -> "Executing" [xlabel="Plan validated"];
+    "Executing" -> "Monitoring" [xlabel="New version deployed"];
+    "Monitoring" -> "Improving" [xlabel="Performance data available"];
+    "Improving" -> "Planning" [constraint=false, penwidth=2, style=dashed, color="#666666"]; // Highlighted loop, label removed
+}

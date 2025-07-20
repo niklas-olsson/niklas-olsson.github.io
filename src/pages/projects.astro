@@ -1,0 +1,82 @@
+---
+const projects = [
+  {
+    title: "The Conductor",
+    description: "A self-optimizing, autonomous system driven by a relentless pursuit of perfection. It's not just about continuous operation, but about continuous evolution and refinement, where feedback fuels an unending cycle of self-improvement. It embodies the ideal of a truly intelligent and adaptive entity that strives for an optimal state as long as there's room to grow.",
+    url: "/projects/the-conductor",
+  },
+  // Add more projects here as needed
+];
+---
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Projects</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    h1 {
+      color: #0056b3;
+      text-align: center;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    li a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    li a:hover {
+      text-decoration: underline;
+    }
+    li p {
+      font-size: 0.9em;
+      color: #666;
+      margin: 0;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+      color: #007bff;
+      text-decoration: none;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Projects</h1>
+  <ul>
+    {projects.map((project) => (
+      <li>
+        <a href={project.url}>{project.title}</a>
+        <p>{project.description}</p>
+      </li>
+    ))}
+  </ul>
+  <a href="/" class="back-link">Back to Home</a>
+</body>
+</html>
