@@ -2,9 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://niklas-olsson.github.io/tags/ai/</loc>
+  </url><url>
+    <loc>https://niklas-olsson.github.io/tags/autonomous-systems/</loc>
+  </url><url>
     <loc>https://niklas-olsson.github.io/insights/categories-vs-tags/</loc>
   </url><url>
     <loc>https://niklas-olsson.github.io/tags/content-management/</loc>
+  </url><url>
+    <loc>https://niklas-olsson.github.io/tags/continuous-improvement/</loc>
+  </url><url>
+    <loc>https://niklas-olsson.github.io/tags/devops/</loc>
   </url><url>
     <loc>https://niklas-olsson.github.io/</loc>
   </url><url>
@@ -14,9 +22,13 @@
   </url><url>
     <loc>https://niklas-olsson.github.io/projects/</loc>
   </url><url>
+    <loc>https://niklas-olsson.github.io/tags/system-design/</loc>
+  </url><url>
     <loc>https://niklas-olsson.github.io/tags/</loc>
   </url><url>
     <loc>https://niklas-olsson.github.io/projects/the-conductor/</loc>
+  </url><url>
+    <loc>https://niklas-olsson.github.io/insights/the-conductor-impact/</loc>
   </url><url>
     <loc>https://niklas-olsson.github.io/waypoints/</loc>
   </url><url>
