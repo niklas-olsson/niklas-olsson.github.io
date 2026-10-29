@@ -1,0 +1,46 @@
+--- a/meson.build
++++ b/meson.build
+@@ -2096,7 +2096,7 @@
+ glib_conf.set('HAVE_DCGETTEXT', 1)
+ glib_conf.set('HAVE_GETTEXT', 1)
+ 
+-glib_conf.set_quoted('GLIB_LOCALE_DIR', join_paths(glib_datadir, 'locale'))
++glib_conf.set_quoted('GLIB_LOCALE_DIR', '/terrarium-runtime/share/locale')
+ 
+ # libmount is only used by gio, but we need to fetch the libs to generate the
+ # pkg-config file below
+--- a/glib/libcharset/meson.build
++++ b/glib/libcharset/meson.build
+@@ -1,6 +1,6 @@
+ charset_lib = static_library('charset', 'localcharset.c',
+   include_directories : configinc,
+   pic : true,
+-  c_args : [ '-DGLIB_CHARSETALIAS_DIR="@0@"'.format(glib_charsetaliasdir) ],
++  c_args : [ '-DGLIB_CHARSETALIAS_DIR="@0@"'.format('/terrarium-runtime/lib') ],
+   gnu_symbol_visibility : 'hidden',
+ )
+--- a/glib/gnulib/meson.build
++++ b/glib/gnulib/meson.build
+@@ -379,7 +379,7 @@
+   dependencies : [libm],
+   include_directories : [configinc, glibinc, include_directories ('.')],
+   pic : true,
+-  c_args : ['-DGCC_LINT=1', '-DLIBDIR="@0@"'.format(glib_libdir), '-DG_LOG_DOMAIN="GLib"',
++  c_args : ['-DGCC_LINT=1', '-DLIBDIR="@0@"'.format('/terrarium-runtime/lib'), '-DG_LOG_DOMAIN="GLib"',
+             glib_c_args_internal, extra_gnulib_args],
+   gnu_symbol_visibility : 'hidden',
+ )
+--- a/gio/meson.build
++++ b/gio/meson.build
+@@ -1,8 +1,8 @@
+ gio_c_args = [
+   '-DG_LOG_DOMAIN="GLib-GIO"',
+-  '-DGIO_LAUNCH_DESKTOP="@0@"'.format(glib_prefix / multiarch_libexecdir / 'gio-launch-desktop'),
+-  '-DGIO_MODULE_DIR="@0@"'.format(glib_giomodulesdir),
+-  '-DLOCALSTATEDIR="@0@"'.format(glib_localstatedir),
++  '-DGIO_LAUNCH_DESKTOP="@0@"'.format('/terrarium-runtime/libexec/gio-launch-desktop'),
++  '-DGIO_MODULE_DIR="@0@"'.format('/terrarium-runtime/lib/gio/modules'),
++  '-DLOCALSTATEDIR="@0@"'.format('/terrarium-runtime/var'),
+ ]
+ 
+ gio_c_args_internal = [

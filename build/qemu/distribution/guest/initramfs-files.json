@@ -1,0 +1,1067 @@
+[
+  {
+    "bytes": 808712,
+    "path": "bin/busybox",
+    "sha256": "7da62d35e17190bb032a55c5e0390e0d832cb2f3f7fc5c4e83ae48fff471f2d6"
+  },
+  {
+    "bytes": 133328,
+    "path": "bin/kmod",
+    "sha256": "9a0742a123b814aa01342b91128d97fed2b9a8a853d5295cf5e5e693a86a6859"
+  },
+  {
+    "bytes": 451,
+    "path": "etc/apk/keys/alpine-devel@lists.alpinelinux.org-4a6a0840.rsa.pub",
+    "sha256": "9c102bcc376af1498d549b77bdbfa815ae86faa1d2d82f040e616b18ef2df2d4"
+  },
+  {
+    "bytes": 451,
+    "path": "etc/apk/keys/alpine-devel@lists.alpinelinux.org-5243ef4b.rsa.pub",
+    "sha256": "ebf31683b56410ecc4c00acd9f6e2839e237a3b62b5ae7ef686705c7ba0396a9"
+  },
+  {
+    "bytes": 451,
+    "path": "etc/apk/keys/alpine-devel@lists.alpinelinux.org-5261cecb.rsa.pub",
+    "sha256": "12f899e55a7691225603d6fb3324940fc51cd7f133e7ead788663c2b7eecb00c"
+  },
+  {
+    "bytes": 800,
+    "path": "etc/apk/keys/alpine-devel@lists.alpinelinux.org-6165ee59.rsa.pub",
+    "sha256": "207e4696d3c05f7cb05966aee557307151f1f00217af4143c1bcaf33b8df733f"
+  },
+  {
+    "bytes": 800,
+    "path": "etc/apk/keys/alpine-devel@lists.alpinelinux.org-61666e3f.rsa.pub",
+    "sha256": "128d34d4aec39b0daedea8163cd8dc24dff36fd3d848630ab97eeb1d3084bbb3"
+  },
+  {
+    "bytes": 125,
+    "path": "etc/fstab",
+    "sha256": "faf6533055ea6d446a36030447a7be306180d7ebf1019e39d3421a9a09441c83"
+  },
+  {
+    "bytes": 273,
+    "path": "etc/group",
+    "sha256": "9f033c74909d8a26e45fc478e061933d8c3a63d979c678cc3c86a16f008ad789"
+  },
+  {
+    "bytes": 3840,
+    "path": "etc/mdev.conf",
+    "sha256": "b12c715e47ec0de24f37dc036872ae0f1d26db0b47de6afc35889cff48e934be"
+  },
+  {
+    "bytes": 1545,
+    "path": "etc/modprobe.d/aliases.conf",
+    "sha256": "3ebaba946f213670170c7d69949f690a3854553bd0b1560f1d980cba4c83a942"
+  },
+  {
+    "bytes": 2136,
+    "path": "etc/modprobe.d/blacklist.conf",
+    "sha256": "5cd46031fc7dc7186e67c97fd34780597de4ebff51dbe41eba27220fe5e0d866"
+  },
+  {
+    "bytes": 122,
+    "path": "etc/modprobe.d/i386.conf",
+    "sha256": "6c46c4cbfb8b7594f19eb94801a350fa2221ae9ac5239a8819d15555caa76ae8"
+  },
+  {
+    "bytes": 91,
+    "path": "etc/modprobe.d/kms.conf",
+    "sha256": "50467fa732f809f3a2bb5738628765c5f895c3a237e1c1ad09f85d41fd9ca7c5"
+  },
+  {
+    "bytes": 115,
+    "path": "etc/passwd",
+    "sha256": "cb9b5145e1caf27f080a7e03363889984b749bf650a1be86f6ba24b37c455975"
+  },
+  {
+    "bytes": 27233,
+    "path": "init",
+    "sha256": "d2b093bf7edbf28b6d9b3920c39333d3bbaff76e7d91abfc665c8d1419026cf3"
+  },
+  {
+    "bytes": 662120,
+    "path": "lib/ld-musl-x86_64.so.1",
+    "sha256": "a3f9d4664f494ffd08fec303e9ad8e20561befe4f307343a00638f8e741d51b1"
+  },
+  {
+    "bytes": 356,
+    "path": "lib/mdev/dvbdev",
+    "sha256": "ef091bb4c8943a99b9a97b556cdc15ddd20275f5afa8287e201419b08c4e71de"
+  },
+  {
+    "bytes": 4144,
+    "path": "lib/mdev/persistent-storage",
+    "sha256": "040751886f8a063df30694771a6f9cec1ff54860e694659e0d417391b6ed5b21"
+  },
+  {
+    "bytes": 364,
+    "path": "lib/mdev/ptpdev",
+    "sha256": "3747ccda4d37b75769f59b2677ae7107b32c9ebd8188e15f4c57e31bd83e1e3d"
+  },
+  {
+    "bytes": 508,
+    "path": "lib/mdev/usbdev",
+    "sha256": "dcb0c37590019bccb4c31a5372cbf7728eae6f1174d56bf0708d7504243a5fbb"
+  },
+  {
+    "bytes": 15399,
+    "path": "lib/modules/6.12.38-0-virt/kernel/arch/x86/crypto/crc32-pclmul.ko",
+    "sha256": "c5bf77c5dd72952e47842079b647a931361d58c7c3d4971eb2c6461f12895765"
+  },
+  {
+    "bytes": 27383,
+    "path": "lib/modules/6.12.38-0-virt/kernel/arch/x86/crypto/crc32c-intel.ko",
+    "sha256": "a8f0f0237ba2d17583ddbd0a31c7c668acd38c0d789446aca39bb43329f31142"
+  },
+  {
+    "bytes": 12591,
+    "path": "lib/modules/6.12.38-0-virt/kernel/crypto/async_tx/async_memcpy.ko",
+    "sha256": "73c5aa9ac7594f3cf7c645177b27ccf0d81be245131f6a400aa43337c2bb784f"
+  },
+  {
+    "bytes": 23631,
+    "path": "lib/modules/6.12.38-0-virt/kernel/crypto/async_tx/async_pq.ko",
+    "sha256": "f77bc474209b5f5bddff36b3c7e683f698ac2026f412ef83169774f40b1eac80"
+  },
+  {
+    "bytes": 12855,
+    "path": "lib/modules/6.12.38-0-virt/kernel/crypto/async_tx/async_raid6_recov.ko",
+    "sha256": "fd972cca48e4b8343355a15013c588f46095e8b22b0601c2d69bab25c999d172"
+  },
+  {
+    "bytes": 16447,
+    "path": "lib/modules/6.12.38-0-virt/kernel/crypto/async_tx/async_tx.ko",
+    "sha256": "007f8ffb464cad99b69126d12502fa290d3ec77d3210f9970b6b9dc270b2b83e"
+  },
+  {
+    "bytes": 20247,
+    "path": "lib/modules/6.12.38-0-virt/kernel/crypto/async_tx/async_xor.ko",
+    "sha256": "e9de50cd80b7691cfb279d6aa409d26b8358976653d31630cd2676b934b03e3e"
+  },
+  {
+    "bytes": 11479,
+    "path": "lib/modules/6.12.38-0-virt/kernel/crypto/crc32_generic.ko",
+    "sha256": "e3070393eb91bc8249acd32d0cef340065007b6b0da342ecc9f75aeec43b55e6"
+  },
+  {
+    "bytes": 11415,
+    "path": "lib/modules/6.12.38-0-virt/kernel/crypto/crc32c_generic.ko",
+    "sha256": "407dd28b7f6405aebc0af57c5fd831cc0f4ba30146e73e0e13302eb614727279"
+  },
+  {
+    "bytes": 30431,
+    "path": "lib/modules/6.12.38-0-virt/kernel/crypto/xor.ko",
+    "sha256": "4eb326ddac820b853f7c5b6cbf12cc0fe63d7886c2e81756361ce3b8c70df5d8"
+  },
+  {
+    "bytes": 169911,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/acpi/nfit/nfit.ko",
+    "sha256": "ad46f64d250258879129f4f0589f87562277144e6718082021580e205cda9794"
+  },
+  {
+    "bytes": 20279,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/ata/ata_generic.ko",
+    "sha256": "3500f833f091bc5121616643977ed2958077ff4dd2bf817e8f03d186c68ebaec"
+  },
+  {
+    "bytes": 83039,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/base/firmware_loader/firmware_class.ko",
+    "sha256": "7f22848ac224174e0174a475e708cc4d9269028094ca5f1ee1be6059149c588f"
+  },
+  {
+    "bytes": 88247,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/block/loop.ko",
+    "sha256": "8ba73ed83238e200e0b26f53de5bb473585a1e1aa4e12ec2c9b274047ea6f97d"
+  },
+  {
+    "bytes": 64743,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/block/virtio_blk.ko",
+    "sha256": "c3896b3504b1345ab409263ec833c7b18ea0ed56a07adcd52c58142f5b86c999"
+  },
+  {
+    "bytes": 157839,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/cdrom/cdrom.ko",
+    "sha256": "a63cad52b481d8298ca0ce9718e4cae9c70674f83b43a8f8e5f6c01c493bb1d8"
+  },
+  {
+    "bytes": 44503,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/char/hw_random/rng-core.ko",
+    "sha256": "fd2f8175e983209f6df235e68b6825ab84fcdb74565ed2f32504f3dc9090a921"
+  },
+  {
+    "bytes": 20143,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/char/hw_random/virtio-rng.ko",
+    "sha256": "b31229d5414a448e30e80ecafd9542c7f440de00bbc2946fd2953f02904027d6"
+  },
+  {
+    "bytes": 1486015,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/gpu/drm/drm.ko",
+    "sha256": "d535a3c7240335ad4a8089ddbc744968ef59fdb622de19ecc5b3416280b743a8"
+  },
+  {
+    "bytes": 531143,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/gpu/drm/drm_kms_helper.ko",
+    "sha256": "f6c2c21b9cf2d6ed0b029205420bd66f19d2aba4a7611450fb9e7df0b6c4807d"
+  },
+  {
+    "bytes": 31751,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko",
+    "sha256": "27cf226843933fcfc89255caa7e9f8afb10b4507c912e040ab217252c641bad3"
+  },
+  {
+    "bytes": 106383,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/gpu/drm/drm_shmem_helper.ko",
+    "sha256": "b80f475705cda10864801a6c53d1c1ba5aa4cbe7af9bfb560725c15ee3bb1598"
+  },
+  {
+    "bytes": 74143,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/gpu/drm/tiny/simpledrm.ko",
+    "sha256": "54aabb8174637ca508c3fd47415df6c271931b3a3eaac6f63fda44aba11fb898"
+  },
+  {
+    "bytes": 267855,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/gpu/drm/virtio/virtio-gpu.ko",
+    "sha256": "3872a86dc1661ca9b1eb5615033f5d6f1a49541c8325c2abdce381a55658dc66"
+  },
+  {
+    "bytes": 17311,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/hid/hid-cherry.ko",
+    "sha256": "3f37ba4fce0497005919c0c5224804bc1fb36fd65b9d5929aeaa1bf03a9dcbdf"
+  },
+  {
+    "bytes": 15567,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/hid/hid-generic.ko",
+    "sha256": "037a03f2a62fa66c1122dcad3391a85beea3f0f9d3f20f7583cb229d49b2ced3"
+  },
+  {
+    "bytes": 455471,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/hid/hid.ko",
+    "sha256": "a56dda556fe78df16d276ef2784036a57dec7bb47736708955c68ed6f51ccedc"
+  },
+  {
+    "bytes": 98343,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/hid/usbhid/usbhid.ko",
+    "sha256": "4a09012c3b7d7534ac92e78291a08a7dea081ec9c64b28f4868c6eb863f9f2f2"
+  },
+  {
+    "bytes": 25479,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/hid/usbhid/usbkbd.ko",
+    "sha256": "5646d182b81f83c0a649c020938b28a9a7b063cb14c2f22a587e709905448339"
+  },
+  {
+    "bytes": 20415,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/hid/usbhid/usbmouse.ko",
+    "sha256": "d4cf64af9df57c6341090073c33437bde3f3fd36f252b819ab236892cee1fc63"
+  },
+  {
+    "bytes": 259175,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/i2c/i2c-core.ko",
+    "sha256": "1421a003c87f427d21147917f96d2a2aecbec7faaa928e84bdd8d20f0d1eb884"
+  },
+  {
+    "bytes": 44111,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/md/raid0.ko",
+    "sha256": "c973c9630ef2e99b684d5e834c70837fe6a96cc1375f92c72b35b39795828351"
+  },
+  {
+    "bytes": 115031,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/md/raid1.ko",
+    "sha256": "984b77ed2416c702577e8002147f2f6ee80dcfad2a6d1d65ba75666f409075af"
+  },
+  {
+    "bytes": 142287,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/md/raid10.ko",
+    "sha256": "b999f3d76d61706cb9192097809f6df640cc5651fa15ff5fd24507baa4503768"
+  },
+  {
+    "bytes": 432167,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/md/raid456.ko",
+    "sha256": "b070d7c326167897e18d38bc1eaba732f0187b3b80c89d860722ac9af65c6e36"
+  },
+  {
+    "bytes": 195575,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/message/fusion/mptbase.ko",
+    "sha256": "0bf3d53856da94b60203e24f220c9a5a63c68589b03ebbbc7a0974e15d891059"
+  },
+  {
+    "bytes": 94527,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/message/fusion/mptctl.ko",
+    "sha256": "40a289b5d6984e03dea12222be25d027246aa3d443b37e087fcd39f60012ed0d"
+  },
+  {
+    "bytes": 71159,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/message/fusion/mptfc.ko",
+    "sha256": "dca7b884278b941700be64c5f8488d9b6214b6add8c44019a9943f94a719da38"
+  },
+  {
+    "bytes": 158423,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/message/fusion/mptsas.ko",
+    "sha256": "fab9e533ce6f746a158a8c34702fa0c009e7ebfb7440b11ea38e5a6e057de8ca"
+  },
+  {
+    "bytes": 88079,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/message/fusion/mptscsih.ko",
+    "sha256": "f53c55618d4d27c8b84678c4265c1a7c8dcd4738e08c87aef3d6b8f58a4d363a"
+  },
+  {
+    "bytes": 75071,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/message/fusion/mptspi.ko",
+    "sha256": "f29515320d5de6540633bb577e2afa95641f2c7c09ca04353df1cc6a0710f22f"
+  },
+  {
+    "bytes": 43863,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/net/net_failover.ko",
+    "sha256": "e9fb9cb193a1988e9aef883c0f7f1b85a414b4dcf7015ed9bf366d06b81ee716"
+  },
+  {
+    "bytes": 246951,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/net/virtio_net.ko",
+    "sha256": "f9cda39928f7ffb0a0928fcd1a216536e631e4fc275555f6cf18f6aaf25d9531"
+  },
+  {
+    "bytes": 57967,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/nvdimm/nd_btt.ko",
+    "sha256": "4536171973dc42b627591dfee4a893bdcf58803d06b2b66460578154d98a847e"
+  },
+  {
+    "bytes": 40751,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/nvdimm/nd_pmem.ko",
+    "sha256": "b38b529c1f623f5030a48961b60baa49d6e929bc292cd9f772f4e8898fb9dbf6"
+  },
+  {
+    "bytes": 16791,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/nvdimm/nd_virtio.ko",
+    "sha256": "bb1e8f1cc795edf5cdbd394d44d4e472b06c73eabfe9b2f642b96fafbbdab732"
+  },
+  {
+    "bytes": 17239,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/nvdimm/virtio_pmem.ko",
+    "sha256": "28e5846cfb167924d9ea6f8bd767a575c93d89c7a34c26136912a378b705c34e"
+  },
+  {
+    "bytes": 429487,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/nvme/host/nvme-core.ko",
+    "sha256": "5e43a1bff208e3ffd1f99cab03e4720a85bb393a89a303d75b9fc16c2b85b5ce"
+  },
+  {
+    "bytes": 80255,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/nvme/host/nvme-fabrics.ko",
+    "sha256": "24381d3fd2e943d74c577584f623be76d1f77c878f6b830f28736415c9af5ccc"
+  },
+  {
+    "bytes": 152383,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/nvme/host/nvme.ko",
+    "sha256": "bc551cbe1a7b1a964786003461dbd385c51367aac08d8393c9e5a7ac8b4fc28d"
+  },
+  {
+    "bytes": 62711,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/nvme/target/nvme-loop.ko",
+    "sha256": "c830a9c4d233b652ea032a3629fcf8cdcc8033b6092a956ab8a76a5c61f570af"
+  },
+  {
+    "bytes": 342535,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/nvme/target/nvmet.ko",
+    "sha256": "6d0bf92509ac562dc51c471aedbbb2f1e816d902b8b0e34c7e3ec846ca686ef5"
+  },
+  {
+    "bytes": 66295,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/scsi/hv_storvsc.ko",
+    "sha256": "8d7c439943b8a30cfa2796a3b530c21ae2186adb26fc7540417b373f72a64d03"
+  },
+  {
+    "bytes": 76663,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/scsi/iscsi_tcp.ko",
+    "sha256": "ac5dc047ff4cc3253c3573cc2d7c34bb5a9349d7fdabc175e075e3377acd96ca"
+  },
+  {
+    "bytes": 190927,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/scsi/libiscsi.ko",
+    "sha256": "fe36524f5ef01ff9438d806974e6bd8a5c49f3f8cd3320410ed8465ebd6119eb"
+  },
+  {
+    "bytes": 79623,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/scsi/libiscsi_tcp.ko",
+    "sha256": "e077aac0ffe1a7abf33be537e83dbe4ba2b2aed2d1feba1b0eb988cc8e133afa"
+  },
+  {
+    "bytes": 294431,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/scsi/libsas/libsas.ko",
+    "sha256": "e1eb0940c25a1f7b907aff9ed44157f6260f83b9ee6f15e0717cc4287d40f73d"
+  },
+  {
+    "bytes": 19559,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/scsi/raid_class.ko",
+    "sha256": "3de32729d99a9642d45bf2fcee5dd66e2307449b4a54023c14ed61af3ff49268"
+  },
+  {
+    "bytes": 214359,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/scsi/scsi_transport_fc.ko",
+    "sha256": "9b452455c5673f3a7426d958b94643e53fc982d14899a4e241eb275413f415c5"
+  },
+  {
+    "bytes": 370943,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/scsi/scsi_transport_iscsi.ko",
+    "sha256": "d02dcfe258c1f173762e92e4e4deaa4415428b68713a42b2cadacd5a525c5ffd"
+  },
+  {
+    "bytes": 114255,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/scsi/scsi_transport_sas.ko",
+    "sha256": "497a875b0777bcbca8cfefac9315a4db26e72af9a1e61a908e62ba2dd99ae315"
+  },
+  {
+    "bytes": 87871,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/scsi/scsi_transport_spi.ko",
+    "sha256": "b3a07fa8e729b969b2ec55a4baa341f76bccefecf1971a9bb2c1e73cd8796328"
+  },
+  {
+    "bytes": 51431,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/scsi/scsi_transport_srp.ko",
+    "sha256": "8cbfbc4cfae959066b42582f8ea694a206413c072e65df2020bb48db3e85439e"
+  },
+  {
+    "bytes": 139079,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/scsi/sd_mod.ko",
+    "sha256": "5862e4cac99d6253466c4f53c0279b9b1eaa432e3b9e391c6ed60969f4b181fd"
+  },
+  {
+    "bytes": 98847,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/scsi/sg.ko",
+    "sha256": "94212ac41665badb56b61504b0b5ffa793c812e9718f86c8dc0e6626774352e0"
+  },
+  {
+    "bytes": 62295,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/scsi/sr_mod.ko",
+    "sha256": "a0fba16db885c9e39442b71fca35840aae1b470927c5ed528ce58a9d5225da8b"
+  },
+  {
+    "bytes": 56103,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/scsi/virtio_scsi.ko",
+    "sha256": "4c4101f4a0932bc164b70a386962e9a6201e9dcbfb95c3bc6d88872e4640f306"
+  },
+  {
+    "bytes": 62215,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/scsi/xen-scsifront.ko",
+    "sha256": "8a5f0f91faced3e607e2263e9c1ed71f0d0acbf9056b6098b68db603c39b2e1c"
+  },
+  {
+    "bytes": 28063,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/usb/common/usb-common.ko",
+    "sha256": "e2c21f4107e86086eba12d4cf491d6bcad0329824d622cd952e8977222916d2d"
+  },
+  {
+    "bytes": 864871,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/usb/core/usbcore.ko",
+    "sha256": "0d8fa9b65bdb05247a08136351e13ec8e8e14bb1087923f73ee3c0880ad168e6"
+  },
+  {
+    "bytes": 220127,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/usb/host/ehci-hcd.ko",
+    "sha256": "2768b25e4f1ff628f0c94ee40952a540d2aff7ef52b2bd5a2282d5890b9ee9fc"
+  },
+  {
+    "bytes": 28679,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/usb/host/ehci-pci.ko",
+    "sha256": "1d264fe88adcfc60152ecc1e5be79a6000c5e54dfc2fa65ca3d9e6e8e38ba9ed"
+  },
+  {
+    "bytes": 37895,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/usb/host/ehci-platform.ko",
+    "sha256": "b5ba4703a0a4cf82a159be45e35874f1fd482e2bbf6d191a96e56f3053eb26b4"
+  },
+  {
+    "bytes": 135703,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/usb/host/ohci-hcd.ko",
+    "sha256": "dc2d20c3c17efcfbcac311efac5796629bf5524cf1ad38e9e52f5d90ac787bac"
+  },
+  {
+    "bytes": 27239,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/usb/host/ohci-pci.ko",
+    "sha256": "9375c885989093f76db7823c5da6e8923976923a3ee5f6c94b4f15027e5b5b30"
+  },
+  {
+    "bytes": 29279,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/usb/host/ohci-platform.ko",
+    "sha256": "d8a6c5581ec245ea68b7e4b0c08250cdbeb366e4c0a215e3cf1073b993c92e17"
+  },
+  {
+    "bytes": 113215,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/usb/host/uhci-hcd.ko",
+    "sha256": "437c5b53717fb88d41379d7670717c765eb9f377eed21640ee1de8e275146835"
+  },
+  {
+    "bytes": 54759,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/usb/host/xen-hcd.ko",
+    "sha256": "3c5446b3e633ade61677515ef2388d8562294c0e8aca962f11ba6968749a4eaf"
+  },
+  {
+    "bytes": 748383,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/usb/host/xhci-hcd.ko",
+    "sha256": "2cdba3102ea505fcca4d62128fb511f75eea6734a5977263cca58c020a8ecc6e"
+  },
+  {
+    "bytes": 49911,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/usb/host/xhci-pci.ko",
+    "sha256": "fe3ca1031cd75cedfbb46dd1b80d54a6d8661d7d98a9a681d5025c89e79427cd"
+  },
+  {
+    "bytes": 66167,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/usb/storage/uas.ko",
+    "sha256": "f688a7ef14ab9e6eb98200f5924cd0967982ba25147eeda2e0c68341a4fe4292"
+  },
+  {
+    "bytes": 207567,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/usb/storage/usb-storage.ko",
+    "sha256": "794ccef8d0c70ee9f7305eb10607b4bffe14c88629567a4875a6edae24378b90"
+  },
+  {
+    "bytes": 77239,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/vdpa/vdpa.ko",
+    "sha256": "1f3751f68dc31f74f667919dcb4d6a368f65c74e01cfd950456884e5661532ff"
+  },
+  {
+    "bytes": 256479,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/video/fbdev/core/fb.ko",
+    "sha256": "efa792060bfeb5ecb3f043f5365949445a68fffe0dce2e9158b399ab6373ae1f"
+  },
+  {
+    "bytes": 16015,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/video/fbdev/core/fb_sys_fops.ko",
+    "sha256": "762c3bf4c37d2ebb75a9306b450fba39bed02b6f39c000a7fc796f5f8069ea88"
+  },
+  {
+    "bytes": 15407,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/video/fbdev/core/syscopyarea.ko",
+    "sha256": "6d2a5613f8ac7a62cf0b7403ad7473d02eb5e6cbbc020dd57fe8fcbad8f79425"
+  },
+  {
+    "bytes": 20087,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/video/fbdev/core/sysfillrect.ko",
+    "sha256": "3198436f3df1747a6b47384e84c0083e88fdc779ff20a067da8908239a4e4420"
+  },
+  {
+    "bytes": 15943,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/video/fbdev/core/sysimgblt.ko",
+    "sha256": "ab1965eef49afef6e39d88953bed2f036c67808f0af023219db2f26338d0f147"
+  },
+  {
+    "bytes": 56639,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/virtio/virtio_balloon.ko",
+    "sha256": "67ea01a5e8c62d6361b1db1ec04475c6164211babaf37623e39483500b48b312"
+  },
+  {
+    "bytes": 9079,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/virtio/virtio_dma_buf.ko",
+    "sha256": "632adbc0e4de0a42392d2ee47868b9499cf85bee32fd31ba94b3ca1321a63700"
+  },
+  {
+    "bytes": 31407,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/virtio/virtio_input.ko",
+    "sha256": "766095ec230aa44ff8db6a6e5650ffc16b055f8467f8d88c58a67a8165a5d341"
+  },
+  {
+    "bytes": 95031,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/virtio/virtio_mem.ko",
+    "sha256": "81ce951801e2cfb19150b85f253704b1801df06293355e2f39da92701625c12e"
+  },
+  {
+    "bytes": 32823,
+    "path": "lib/modules/6.12.38-0-virt/kernel/drivers/virtio/virtio_vdpa.ko",
+    "sha256": "5529a91bb52c9e5a0b0e5401305bdb9a97ab3f6f02bd6ea09b4e600e042535a7"
+  },
+  {
+    "bytes": 139783,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/configfs/configfs.ko",
+    "sha256": "9c84c1ac772430574833106efb5042e3cc945c6de501a100b0447c0282b73402"
+  },
+  {
+    "bytes": 2375607,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/ext4/ext4.ko",
+    "sha256": "4e7a12cdeaca90ae5166887ba6e854837a7c9da9aeb1bdb137ffa49611d01485"
+  },
+  {
+    "bytes": 218551,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/fat/fat.ko",
+    "sha256": "be5a55df0b5285c4cd264ebbba792122fadbca19b38bf0d537cce1c90a87131b"
+  },
+  {
+    "bytes": 39599,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/fat/msdos.ko",
+    "sha256": "21c70808a75c33335396c75d344935cf92e8f070c7a621682a94386b663b7fa0"
+  },
+  {
+    "bytes": 52911,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/fat/vfat.ko",
+    "sha256": "43d85d6b542d16f5408f867679b7209888ab1f0a3d09fa0690aabd63f8adfb8f"
+  },
+  {
+    "bytes": 500751,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/fuse/fuse.ko",
+    "sha256": "655535d58d2bbdfa77a41aa2885c2846d41f0f96661edacacd48c0514be8b4a9"
+  },
+  {
+    "bytes": 81463,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/fuse/virtiofs.ko",
+    "sha256": "4e72cdc289491bc42bc10c7fd25fa125634240dc563375ba6d94b57134b19190"
+  },
+  {
+    "bytes": 101991,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/isofs/isofs.ko",
+    "sha256": "f5679fbe90d0677a03ca526f094cc8d2fc9d46db5bdbc1aed87f566b40e61153"
+  },
+  {
+    "bytes": 419743,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/jbd2/jbd2.ko",
+    "sha256": "c9733ace6ce8b5132aba658e07a817b9470dc11f1777512e906175d52ff0bd91"
+  },
+  {
+    "bytes": 29151,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/mbcache.ko",
+    "sha256": "e86598a297ced8fcb01ead1be6846e8d59beb24c31a528347d9083afa41dfa61"
+  },
+  {
+    "bytes": 14967,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/mac-celtic.ko",
+    "sha256": "a8fb3befd76607c0f8650d1fc57583e60300b443c9cb64f0ed0e7f5d76a6c80a"
+  },
+  {
+    "bytes": 14359,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/mac-centeuro.ko",
+    "sha256": "e298b99ab591babbefd6416f0df74021e8cda507adc98e0445fe44cfe08723ca"
+  },
+  {
+    "bytes": 14975,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/mac-croatian.ko",
+    "sha256": "8b896b3cba057ed599a36a7abb2b3e29daeb35fe1b477f579f9166c492a9bff7"
+  },
+  {
+    "bytes": 14047,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/mac-cyrillic.ko",
+    "sha256": "db129e691f8af6b245f8eef6937c0d557d461e822783e109e546f76fd8a193b1"
+  },
+  {
+    "bytes": 14655,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/mac-gaelic.ko",
+    "sha256": "b6bca9fb9991410e76560236cae0e1b454d9c0ef5b214e44aa26acbb7a35a9bd"
+  },
+  {
+    "bytes": 14031,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/mac-greek.ko",
+    "sha256": "e118e9440759889bf4f8314e1c5561f0e07f9e3bbbbbec9b1f8deab4201a4dfc"
+  },
+  {
+    "bytes": 14967,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/mac-iceland.ko",
+    "sha256": "4859bba231398d9ed6329cfa081d5aff5eacb8259815855d0a72819bc7b2d29e"
+  },
+  {
+    "bytes": 14343,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/mac-inuit.ko",
+    "sha256": "9a5decb4527978c0069ad60e9b8ef115ef7a74f980103ff02f6faae5df1be987"
+  },
+  {
+    "bytes": 15279,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/mac-roman.ko",
+    "sha256": "68504f54a7bf6ca898d65d20fef6bfe42828ce0500ef5d6077aa228fc94338c4"
+  },
+  {
+    "bytes": 14975,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/mac-romanian.ko",
+    "sha256": "93a541381f02fb3365cfc636aea93b1f4b59171911456305698ede930a4355fe"
+  },
+  {
+    "bytes": 14967,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/mac-turkish.ko",
+    "sha256": "484ac6a1c848e19d4a8d7992de9c3fb96b0a8f8cdc461dbeb043587562ee4713"
+  },
+  {
+    "bytes": 12463,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_ascii.ko",
+    "sha256": "c3808881dafd2c675624061defeda6d786a2c721b6028fc8c472158c91d4c092"
+  },
+  {
+    "bytes": 13775,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp1250.ko",
+    "sha256": "931a915051f027691d1665408d2f4dab17a173d311de4dddc905dfeb899a0535"
+  },
+  {
+    "bytes": 13399,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp1251.ko",
+    "sha256": "811e710b7c6d6f181d4871a24b431e9b9414829727f2778c71ef7c095422c70f"
+  },
+  {
+    "bytes": 14151,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp1255.ko",
+    "sha256": "2a081cfa91ed21e9f6351b4bd354a0a451aa5462df788dfd7d00a4ffc53d6b85"
+  },
+  {
+    "bytes": 14327,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp437.ko",
+    "sha256": "2dc62b6367ca24b0c89d7d4c7df98de7afbe6e1d6c9a7c533469e9bf238aa4e8"
+  },
+  {
+    "bytes": 13703,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp737.ko",
+    "sha256": "d70808721d054beef433d47e75b3eaf989c225376200cae7dc9df791c6edc321"
+  },
+  {
+    "bytes": 13703,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp775.ko",
+    "sha256": "8d7c5c4c51e5499abebd0c52a37e8aee9e535bbd9250fe90543501f968d2272c"
+  },
+  {
+    "bytes": 13399,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp850.ko",
+    "sha256": "0980177d72ec0fd6f2fed4ff7af0bbf5ab3c2875cd6a1f7939bc45cf09bf3c1d"
+  },
+  {
+    "bytes": 13399,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp852.ko",
+    "sha256": "7b9abf83dc0479271a40ee12eb6597302c1cccc5e424e2f757aa296b95975b96"
+  },
+  {
+    "bytes": 13399,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp855.ko",
+    "sha256": "5729e5f1e27bbf7a53de58e68ef5972893d4b57931c541acce2a4d5094b28ca5"
+  },
+  {
+    "bytes": 13087,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp857.ko",
+    "sha256": "ab73865d4156e85b2e09f8287f9918924ab53b4e0f3015a2c1d4aa8a03727258"
+  },
+  {
+    "bytes": 14015,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp860.ko",
+    "sha256": "bb31273a3c09ed539f8849907b0267a78412080fe8013208d599c47ea896a352"
+  },
+  {
+    "bytes": 14327,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp861.ko",
+    "sha256": "d8f8d598c312525abf88b71d0b0b3521ad7950a226c47c5ffe2c8e617029e23a"
+  },
+  {
+    "bytes": 14639,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp862.ko",
+    "sha256": "e60cdf219e81eeeff855efcbd0fcb0d7beed96e8934f5cc59c0a9f4094a4c77a"
+  },
+  {
+    "bytes": 14327,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp863.ko",
+    "sha256": "d8ccfcc796d4d3614d885c8e386e856fa7170c9aae2aebfa6d8e68066e239488"
+  },
+  {
+    "bytes": 14015,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp864.ko",
+    "sha256": "d944b30ddf2ce35cfb6a1cf999157d873b501bc64658c332f9291b94d9cfcf56"
+  },
+  {
+    "bytes": 14327,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp865.ko",
+    "sha256": "1d71fd3ba5b2c283f2d8a4afbb36e5abdcc8e38f4619771350dc88c0dca61544"
+  },
+  {
+    "bytes": 13703,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp866.ko",
+    "sha256": "983ef83b42feedb653c3f6725219ef24ef7a4582841ebc66995939e905839e6a"
+  },
+  {
+    "bytes": 13399,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp869.ko",
+    "sha256": "ec3496588db9724b8b4915942334c803644dfce59a63d822d548503939bec9b4"
+  },
+  {
+    "bytes": 13215,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp874.ko",
+    "sha256": "2de8bf9f78a35d2f17d61b2e18f28ed48b6d0a009b910d0540ce128b9cfd398b"
+  },
+  {
+    "bytes": 95823,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp932.ko",
+    "sha256": "57817a168c371b20e14e85715e78ef3e8197714a7e17badd200600ad1dd10d23"
+  },
+  {
+    "bytes": 144463,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp936.ko",
+    "sha256": "5981c3ebba3d9f4e0426800779d8b80a206c6b82fb6090b176db40157f660c59"
+  },
+  {
+    "bytes": 167303,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp949.ko",
+    "sha256": "0bd7f16c4f80918b489bd4579a5fe44c92b9e1d99ce02e32e9c8143f06290add"
+  },
+  {
+    "bytes": 119671,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_cp950.ko",
+    "sha256": "b7c278e80bd8d2f48ddc2866afa6a410a22117d95afd230780a2dcb8ae43c886"
+  },
+  {
+    "bytes": 14535,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_euc-jp.ko",
+    "sha256": "b4481fa97570d6b963df707fe7f3a5a01cc3890a93a968627c6046ff19e1b7d8"
+  },
+  {
+    "bytes": 12543,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_iso8859-1.ko",
+    "sha256": "ec6af94ba1c6edd7756f44b81d390ee6333fec723c484ad20c4f1d9d90eb9c40"
+  },
+  {
+    "bytes": 13103,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_iso8859-13.ko",
+    "sha256": "81cd51b2f3eecec876b8ea3f37f2352273954ae4adb6a0bb2a133e7f8b043d00"
+  },
+  {
+    "bytes": 13103,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_iso8859-14.ko",
+    "sha256": "1ae4cd0490def600000a85b07d77315ab06d38526dc15946d1f92cab595121a8"
+  },
+  {
+    "bytes": 13167,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_iso8859-15.ko",
+    "sha256": "b88f6f7e54f0e0ab4f7a850c7f82e2c80e5195328262959cafbbfc15600a0f76"
+  },
+  {
+    "bytes": 13167,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_iso8859-2.ko",
+    "sha256": "74d76583733138738efc9f60b0f23b539eccae0849b81660cab61d1b7cf19719"
+  },
+  {
+    "bytes": 13167,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_iso8859-3.ko",
+    "sha256": "a7ff29c902f7a852b53847b04476a3ad8a83f3c199149824fa2b328d71806846"
+  },
+  {
+    "bytes": 13167,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_iso8859-4.ko",
+    "sha256": "672f9d8f27c8902df0748637f9e9e183533d24effd7e564f963a74908797d9f3"
+  },
+  {
+    "bytes": 13103,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_iso8859-5.ko",
+    "sha256": "8113de8e4d25665fab387bb0538740ebbeb458e398aa5a8a2bb3c06281d547f0"
+  },
+  {
+    "bytes": 12791,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_iso8859-6.ko",
+    "sha256": "4faee1d8e56bae64d42ccb0b0d3e57e2fbf06fd643672d84463e22f37cf5c7ff"
+  },
+  {
+    "bytes": 13415,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_iso8859-7.ko",
+    "sha256": "12b5706da459c5b01e6951bc31d494a94d8da88fa2fbfb4a3c97f2b2ac3c8bad"
+  },
+  {
+    "bytes": 12791,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_iso8859-9.ko",
+    "sha256": "ae698e1509e4b82845eb87075c292487df5661ad02a56a38e3a674efc8716f1c"
+  },
+  {
+    "bytes": 13711,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_koi8-r.ko",
+    "sha256": "c5d32e25fedcd3a68badfce33e868c470c14ffc71ec3c842a9ffae26473caf7a"
+  },
+  {
+    "bytes": 10087,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_koi8-ru.ko",
+    "sha256": "c1766e9e0a4f2a4aec3b9cc93295ab907cadaf8b19ca3b02a2e41041e3b73ccd"
+  },
+  {
+    "bytes": 13711,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_koi8-u.ko",
+    "sha256": "393f6b0c173c5750b0263a3b0a2c1a27946b55c32f26daf3691737bb98c3d358"
+  },
+  {
+    "bytes": 7671,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_ucs2_utils.ko",
+    "sha256": "52937bd5c99898239048633d24fe0e0dbc2b10c5f6eee9d57444553445e3012a"
+  },
+  {
+    "bytes": 9799,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/nls/nls_utf8.ko",
+    "sha256": "3b4fc5beea6ddef5768c4c0a19fcaf871ac7fe3e11f0079bf97c8ff035473220"
+  },
+  {
+    "bytes": 476263,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/overlayfs/overlay.ko",
+    "sha256": "ada7e6f4c5d136f7bf85974c3e4a531ab7cfa7cd554cabae0eb311ece7fa681f"
+  },
+  {
+    "bytes": 175199,
+    "path": "lib/modules/6.12.38-0-virt/kernel/fs/squashfs/squashfs.ko",
+    "sha256": "321ff9875e038d6dda202c3f4190d42c761058b8a052e3b1ef3a3bc3cbbb2960"
+  },
+  {
+    "bytes": 7135,
+    "path": "lib/modules/6.12.38-0-virt/kernel/lib/crc16.ko",
+    "sha256": "81c80971a9e1c108e1042c69d049b5582c036cc377008efb33fb53d64ef9744c"
+  },
+  {
+    "bytes": 9959,
+    "path": "lib/modules/6.12.38-0-virt/kernel/lib/libcrc32c.ko",
+    "sha256": "2a77e582183cd0590695485a6af77a00d07dd38c3161fd0dc698108e01ced76c"
+  },
+  {
+    "bytes": 151503,
+    "path": "lib/modules/6.12.38-0-virt/kernel/lib/raid6/raid6_pq.ko",
+    "sha256": "839701f0f02b2b50493217b8cb0fa7e6fac0c3ba1071f4c54fa247a1d35508bf"
+  },
+  {
+    "bytes": 22791,
+    "path": "lib/modules/6.12.38-0-virt/kernel/net/core/failover.ko",
+    "sha256": "767fb839739811c6253781754940530319ccb1b892efc70152d30d0edb21ebab"
+  },
+  {
+    "bytes": 37177,
+    "path": "lib/modules/6.12.38-0-virt/modules.alias",
+    "sha256": "636048d9fd3bc650addba49340e691f50aac155d965b1dc00e70b919b37c16dd"
+  },
+  {
+    "bytes": 44230,
+    "path": "lib/modules/6.12.38-0-virt/modules.alias.bin",
+    "sha256": "fbe6555d07bed5f4db9801364f2c7fb467e692e2aa7f0af483a860f03860619b"
+  },
+  {
+    "bytes": 4342,
+    "path": "lib/modules/6.12.38-0-virt/modules.builtin",
+    "sha256": "4c41bf28b6961b97d2c823d6ae2d7d09e46e66df8a046a9f4b2769a94e4ec083"
+  },
+  {
+    "bytes": 3795,
+    "path": "lib/modules/6.12.38-0-virt/modules.builtin.alias.bin",
+    "sha256": "086b2198b8bebbbe24a20220e0e663f572f10448750836fac2a18aa247487c55"
+  },
+  {
+    "bytes": 6065,
+    "path": "lib/modules/6.12.38-0-virt/modules.builtin.bin",
+    "sha256": "4dddd42483f1f293c92f21627634d37e4a8a9d91f902aa8f6d8ff0557b1179d8"
+  },
+  {
+    "bytes": 42883,
+    "path": "lib/modules/6.12.38-0-virt/modules.builtin.modinfo",
+    "sha256": "76e6979b25be3878aec0d0a5d9094c97863ff5059e39dec8c15ae7a00a240293"
+  },
+  {
+    "bytes": 10476,
+    "path": "lib/modules/6.12.38-0-virt/modules.dep",
+    "sha256": "df143bf46f788c5a63dc239d548573c21310506aa8a4cc96d6bc3add074cf907"
+  },
+  {
+    "bytes": 16086,
+    "path": "lib/modules/6.12.38-0-virt/modules.dep.bin",
+    "sha256": "7f88a65bb97906a8eb36a3296e37763a2ad70f9925e63de1e77b1b578671bb4a"
+  },
+  {
+    "bytes": 96,
+    "path": "lib/modules/6.12.38-0-virt/modules.devname",
+    "sha256": "c610d55e24f7d5fbe58e187351dfd5f4dbf56922d1d4cadd996f969ef583919c"
+  },
+  {
+    "bytes": 31245,
+    "path": "lib/modules/6.12.38-0-virt/modules.order",
+    "sha256": "0ed674805828fa34f844e01fe03fee6e0462f41e18a9da01c02d09a2a497308f"
+  },
+  {
+    "bytes": 172,
+    "path": "lib/modules/6.12.38-0-virt/modules.softdep",
+    "sha256": "c9cab40f4e35c23a18ec73439e9dd213d9ea174b3a555382e83efd62f40f1a26"
+  },
+  {
+    "bytes": 80204,
+    "path": "lib/modules/6.12.38-0-virt/modules.symbols",
+    "sha256": "470ef55c9d9fef7af31c83d820afd052952a913843efeefeb01babac7f465aa4"
+  },
+  {
+    "bytes": 95052,
+    "path": "lib/modules/6.12.38-0-virt/modules.symbols.bin",
+    "sha256": "039f3e58adee9c9ec27d359607e0cd9af958bf49cfb2d04c43f0eb876f3216fd"
+  },
+  {
+    "bytes": 55,
+    "path": "lib/modules/6.12.38-0-virt/modules.weakdep",
+    "sha256": "a1fffe1059d8150b5d402b3f284f507025a8d4b5881810cb17b3fda8b8ab9304"
+  },
+  {
+    "bytes": 69648,
+    "path": "sbin/apk",
+    "sha256": "311602dceb45e207993890f7c45ea934d3bd07794103f3b572f7f06ae67942b0"
+  },
+  {
+    "bytes": 4624,
+    "path": "sbin/bootchartd",
+    "sha256": "2aa11141f9087e2d955cf4f56ea84d36ea65819d32448822de26326f5a95e992"
+  },
+  {
+    "bytes": 34960,
+    "path": "sbin/nlplug-findfs",
+    "sha256": "7e78d6c5210f8df931b4ff4813821507391f4118878b54e704de49d7d563f97e"
+  },
+  {
+    "bytes": 183992,
+    "path": "usr/lib/libapk.so.2.14.0",
+    "sha256": "2a6a9b39faa424c64e2fccd12bf060e187b0dba044f111916457fab4cb6da9be"
+  },
+  {
+    "bytes": 195456,
+    "path": "usr/lib/libblkid.so.1.1.0",
+    "sha256": "a6eb45b84fd1a2fa3a128044b94ed10432c8a6a77e2e3473cfbf42295af931f8"
+  },
+  {
+    "bytes": 4494672,
+    "path": "usr/lib/libcrypto.so.3",
+    "sha256": "627932c3b6136fa930162c659c3fdb205aa40aad8b334de37c5e06604b15eaf7"
+  },
+  {
+    "bytes": 464064,
+    "path": "usr/lib/libcryptsetup.so.12.10.0",
+    "sha256": "89c7d85d87afaa137b2e1cbf95f1a725ae8992ebcabcf84dd035d9ec0d16c847"
+  },
+  {
+    "bytes": 301120,
+    "path": "usr/lib/libdevmapper.so.1.02",
+    "sha256": "fe0e0379434ebd85913dd12394d1ab4382f3cada667a331e3d793e19e0db454d"
+  },
+  {
+    "bytes": 38752,
+    "path": "usr/lib/libeconf.so.0.6.2",
+    "sha256": "e8c2755072882180461c15e60c90025fd819fc9e8afb654476a66eafb602f27b"
+  },
+  {
+    "bytes": 63576,
+    "path": "usr/lib/libjson-c.so.5.4.0",
+    "sha256": "54393c2f118c13e4e0180c33dca2e4be4168d237bd35d648e4859a366721aca0"
+  },
+  {
+    "bytes": 87976,
+    "path": "usr/lib/libkmod.so.2.5.0",
+    "sha256": "73905a1feff43ab849cc9ecc79ab81afc51af2a82ec1c2336822300318cd4be4"
+  },
+  {
+    "bytes": 227008,
+    "path": "usr/lib/liblzma.so.5.6.3",
+    "sha256": "20c6365c5c8cdc5c1752491aea7b3a7c763742aeebc9f1d3b461401b0d8a472c"
+  },
+  {
+    "bytes": 798424,
+    "path": "usr/lib/libssl.so.3",
+    "sha256": "f93a7835597afc8f16b38a07e84f19e30c03595b87b0e75bbab2023a0e52dc5c"
+  },
+  {
+    "bytes": 30624,
+    "path": "usr/lib/libuuid.so.1.3.0",
+    "sha256": "e380fa0b24e29d57a02c401a07bf81f9654bbf4796452403c86771b25f92120e"
+  },
+  {
+    "bytes": 104280,
+    "path": "usr/lib/libz.so.1.3.1",
+    "sha256": "8411f554eb35ef6c45fb8c3df25cfdacaf36de66968b7f7474674c328e2f51e8"
+  },
+  {
+    "bytes": 714432,
+    "path": "usr/lib/libzstd.so.1.5.6",
+    "sha256": "619b3b7dc3190538fff13efbc7c39820475c7b508c28cab9e1d138d86a4e36b7"
+  },
+  {
+    "bytes": 512,
+    "path": "var/cache/misc/modloop-virt.SIGN.RSA.alpine-devel@lists.alpinelinux.org-6165ee59.rsa.pub",
+    "sha256": "ea90e45f4901f4f1736e777d682f5980ab4eda13b0d9458264dacefc0e150d6c"
+  }
+]

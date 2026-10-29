@@ -1,0 +1,19 @@
+{
+  "schema": "terrarium.guest-build-tools/v1",
+  "purpose": "Bounded reader for the locked Alpine modloop, separate from the runtime compiler input lock",
+  "metadataUrl": "https://pypi.org/pypi/PySquashfsImage/0.9.0/json",
+  "inputs": [
+    {
+      "file": "PySquashfsImage-0.9.0-py2.py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/28/f7/fa862ed72fbd05c930aeb979785fcfe33f9b874e639eb563f5ab9e46e277/PySquashfsImage-0.9.0-py2.py3-none-any.whl",
+      "bytes": 43220,
+      "sha256": "a8ea154bf946f985c65fab7d8c08dc73da7ad47a0aebf0d13ae50ae56e369f90"
+    },
+    {
+      "file": "PySquashfsImage-0.9.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/62/b6/8a453795e78c743bb6d765b8288f86ecbba4e3522bcc1db534142062ec0e/PySquashfsImage-0.9.0.tar.gz",
+      "bytes": 44190,
+      "sha256": "d3330ccd111ac2ef2cebf0c392077fe8608e2760862531d960ec9cb6c6d3655f"
+    }
+  ]
+}

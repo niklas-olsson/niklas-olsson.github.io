@@ -1,0 +1,77 @@
+--- a/src/wasm32/ffi.c
++++ b/src/wasm32/ffi.c
+@@ -64,19 +64,19 @@
+ #define SIG(sig) sig
+ #endif
+ 
+-#define DEREF_U8(addr, offset) HEAPU8[addr + offset]
+-#define DEREF_S8(addr, offset) HEAP8[addr + offset]
+-#define DEREF_U16(addr, offset) HEAPU16[(addr >> 1) + offset]
+-#define DEREF_S16(addr, offset) HEAP16[(addr >> 1) + offset]
+-#define DEREF_U32(addr, offset) HEAPU32[(addr >> 2) + offset]
+-#define DEREF_S32(addr, offset) HEAP32[(addr >> 2) + offset]
+-
+-#define DEREF_F32(addr, offset) HEAPF32[(addr >> 2) + offset]
+-#define DEREF_F64(addr, offset) HEAPF64[(addr >> 3) + offset]
++#define DEREF_U8(addr, offset) HEAPU8[((addr) >>> 0) + (offset)]
++#define DEREF_S8(addr, offset) HEAP8[((addr) >>> 0) + (offset)]
++#define DEREF_U16(addr, offset) HEAPU16[((addr) >>> 1) + (offset)]
++#define DEREF_S16(addr, offset) HEAP16[((addr) >>> 1) + (offset)]
++#define DEREF_U32(addr, offset) HEAPU32[((addr) >>> 2) + (offset)]
++#define DEREF_S32(addr, offset) HEAP32[((addr) >>> 2) + (offset)]
++
++#define DEREF_F32(addr, offset) HEAPF32[((addr) >>> 2) + (offset)]
++#define DEREF_F64(addr, offset) HEAPF64[((addr) >>> 3) + (offset)]
+ 
+ #if WASM_BIGINT
+ // We have HEAPU64 in this case.
+-#define DEREF_U64(addr, offset) HEAPU64[(addr >> 3) + offset]
++#define DEREF_U64(addr, offset) HEAPU64[((addr) >>> 3) + (offset)]
+ #endif
+ 
+ 
+@@ -107,7 +107,7 @@
+ #define FFI_TYPE__TYPEID(addr) DEREF_U16(addr + 6, 0)
+ #define FFI_TYPE__ELEMENTS(addr) DEREF_U32(addr + 8, 0)
+ 
+-#define ALIGN_ADDRESS(addr, align) (addr &= (~((align) - 1)))
++#define ALIGN_ADDRESS(addr, align) ((addr) = (((addr) & (~((align) - 1))) >>> 0))
+ #define STACK_ALLOC(stack, size, align) ((stack -= (size)), ALIGN_ADDRESS(stack, align))
+ 
+ // Most wasm runtimes support at most 1000 Js trampoline args.
+@@ -331,7 +331,7 @@
+       var size = FFI_TYPE__SIZE(arg_type_ptr);
+       var align = FFI_TYPE__ALIGN(arg_type_ptr);
+       STACK_ALLOC(cur_stack_ptr, size, align);
+-      HEAP8.subarray(cur_stack_ptr, cur_stack_ptr+size).set(HEAP8.subarray(arg_ptr, arg_ptr + size));
++      HEAP8.subarray(cur_stack_ptr >>> 0, (cur_stack_ptr >>> 0) + size).set(HEAP8.subarray(arg_ptr >>> 0, (arg_ptr >>> 0) + size));
+       args.push(cur_stack_ptr);
+       SIG(sig += 'i');
+       break;
+@@ -415,7 +415,7 @@
+       var size = struct_info[2];
+       var align = struct_info[3];
+       STACK_ALLOC(cur_stack_ptr, size, align);
+-      HEAP8.subarray(cur_stack_ptr, cur_stack_ptr+size).set(HEAP8.subarray(arg_ptr, arg_ptr + size));
++      HEAP8.subarray(cur_stack_ptr >>> 0, (cur_stack_ptr >>> 0) + size).set(HEAP8.subarray(arg_ptr >>> 0, (arg_ptr >>> 0) + size));
+       DEREF_U32(arg_target, 0) = cur_stack_ptr;
+     }
+   }
+@@ -808,7 +808,7 @@
+         // cur_arg is already a pointer to struct
+         // copy it onto stack to pass by value
+         STACK_ALLOC(cur_ptr, arg_size, arg_align);
+-        HEAP8.subarray(cur_ptr, cur_ptr + arg_size).set(HEAP8.subarray(cur_arg, cur_arg + arg_size));
++        HEAP8.subarray(cur_ptr >>> 0, (cur_ptr >>> 0) + arg_size).set(HEAP8.subarray(cur_arg >>> 0, (cur_arg >>> 0) + arg_size));
+         DEREF_U32(args_ptr, carg_idx) = cur_ptr;
+         break;
+       case FFI_TYPE_FLOAT:
+@@ -873,7 +873,7 @@
+         // deref once
+         var struct_ptr = DEREF_U32(varargs, 0);
+         STACK_ALLOC(cur_ptr, arg_size, arg_align);
+-        HEAP8.subarray(cur_ptr, cur_ptr + arg_size).set(HEAP8.subarray(struct_ptr, struct_ptr + arg_size));
++        HEAP8.subarray(cur_ptr >>> 0, (cur_ptr >>> 0) + arg_size).set(HEAP8.subarray(struct_ptr >>> 0, (struct_ptr >>> 0) + arg_size));
+         DEREF_U32(args_ptr, carg_idx) = cur_ptr;
+       } else {
+         DEREF_U32(args_ptr, carg_idx) = varargs;

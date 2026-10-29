@@ -1,0 +1,72 @@
+--- a/hw/core/machine.c
++++ b/hw/core/machine.c
+@@ -1388,6 +1388,35 @@
+ }
+ 
+ 
++#if defined(EMSCRIPTEN)
++/* The fixed Wasm PC server uses two separately allocated 1 GiB RAMBlocks.
++ * Keep each mmap below libc's PTRDIFF_MAX limit and cap the aggregate at 2 GiB.
++ * This is not permission to allocate a single larger mapping or hotplug RAM. */
++static bool wasm_segmented_pc_ram_supported(MachineState *machine)
++{
++    MachineClass *mc = MACHINE_GET_CLASS(machine);
++    NumaState *numa = machine->numa_state;
++    if (!mc->family || strcmp(mc->family, "pc_piix") != 0 ||
++        machine->ram_size != 2 * GiB ||
++        machine->maxram_size != machine->ram_size || machine->ram_slots ||
++        machine->smp.cpus != 2 || machine->smp.max_cpus != 2 ||
++        machine->memdev || !numa || numa->num_nodes != 2 ||
++        numa_uses_legacy_mem()) {
++        return false;
++    }
++    for (int i = 0; i < 2; i++) {
++        NodeInfo *node = &numa->nodes[i];
++        if (!node->present || node->node_mem != GiB || !node->node_memdev ||
++            strcmp(object_get_typename(OBJECT(node->node_memdev)),
++                   TYPE_MEMORY_BACKEND_RAM) != 0 ||
++            memory_region_size(host_memory_backend_get_memory(node->node_memdev)) != GiB) {
++            return false;
++        }
++    }
++    return numa->nodes[0].node_memdev != numa->nodes[1].node_memdev;
++}
++#endif
++
+ void machine_run_board_init(MachineState *machine, const char *mem_path, Error **errp)
+ {
+     ERRP_GUARD();
+@@ -1401,8 +1430,13 @@
+     replay_checkpoint(CHECKPOINT_INIT);
+ 
+     if (!xen_enabled()) {
+-        /* On 32-bit hosts, QEMU is limited by virtual address space */
+-        if (machine->ram_size > (2047 << 20) && HOST_LONG_BITS == 32) {
++        /* On 32-bit hosts, QEMU is limited by virtual address space. */
++        bool segmented_wasm_ram = false;
++#if defined(EMSCRIPTEN)
++        segmented_wasm_ram = wasm_segmented_pc_ram_supported(machine);
++#endif
++        if (machine->ram_size > (2047 << 20) && HOST_LONG_BITS == 32 &&
++            !segmented_wasm_ram) {
+             error_setg(errp, "at most 2047 MB RAM can be simulated");
+             return;
+         }
+--- a/util/mmap-alloc.c
++++ b/util/mmap-alloc.c
+@@ -252,7 +252,15 @@
+ {
+ #if defined(EMSCRIPTEN)
+     void *ptr;
++    /* Preserve the libc single-mapping bound, including alignment slack. */
++    if (align >= PTRDIFF_MAX || size >= PTRDIFF_MAX - align) {
++        errno = ENOMEM;
++        return MAP_FAILED;
++    }
+     ptr = mmap_activate(0, size + align, fd, qemu_map_flags, map_offset);
++    if (ptr == MAP_FAILED) {
++        return MAP_FAILED;
++    }
+     return (void *)QEMU_ALIGN_UP((uintptr_t)ptr, align);
+ #else
+     const size_t guard_pagesize = mmap_guard_pagesize(fd);

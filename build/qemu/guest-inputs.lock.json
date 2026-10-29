@@ -1,0 +1,32 @@
+{
+  "schema": "terrarium.qemu-guest-inputs/v1",
+  "distribution": "Alpine Linux 3.21.4",
+  "architecture": "x86_64",
+  "kernelRelease": "6.12.38-0-virt",
+  "aportsRevision": "65d7de3fa8abb17af34345199476cd7f91d05715",
+  "rootBytes": 157286400,
+  "rootMode": "read-only base plus temporary writable overlay",
+  "sourceDateEpoch": 1700000000,
+  "imageCompatibility": "alpine3.21.4-linux6.12.38-terrarium-s1-candidate-v2",
+  "status": "candidate-not-qualified",
+  "inputs": [
+    {
+      "file": "alpine-minirootfs-3.21.4-x86_64.tar.gz",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.21/releases/x86_64/alpine-minirootfs-3.21.4-x86_64.tar.gz",
+      "bytes": 3502894,
+      "sha256": "e5f52d56d807a069ae0acf9015a85c43e057acab1197518171017b68b19bf445"
+    },
+    {
+      "file": "alpine-virt-3.21.4-x86_64.iso",
+      "url": "https://dl-cdn.alpinelinux.org/alpine/v3.21/releases/x86_64/alpine-virt-3.21.4-x86_64.iso",
+      "bytes": 67108864,
+      "sha256": "c72ea5ba6d3acd5dda963e3926032bd73aaef8f52ec1da71927ed1b59748d00c"
+    },
+    {
+      "file": "aports-v3.21.4.tar.gz",
+      "url": "https://codeload.github.com/alpinelinux/aports/tar.gz/65d7de3fa8abb17af34345199476cd7f91d05715",
+      "bytes": 13580433,
+      "sha256": "511350cdbbbdc33b43308244203ef32203ac0e34c035e6f2984e24b2dd8d2788"
+    }
+  ]
+}

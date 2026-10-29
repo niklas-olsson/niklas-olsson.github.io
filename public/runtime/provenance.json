@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "package": {
+    "name": "v86",
+    "version": "0.5.472",
+    "embeddedVersion": "0.5.472+gcc37f35",
+    "license": "BSD-2-Clause",
+    "integrity": "sha512-x2uw/IeJvIxSelkHvM3BzfhJ0KQOo3fFEOyMxIiOjMeCZFrR+UYwJ44/swRabcP/5QL1hBimUewpRPYWOwFI0A==",
+    "sourceCommit": "cc37f35c43bf14865d74ad76879ecf9410f69eb1",
+    "source": "https://github.com/copy/v86/tree/cc37f35c43bf14865d74ad76879ecf9410f69eb1"
+  },
+  "upstreamEmulatorAssets": [
+    {
+      "file": "libv86.js",
+      "bytes": 359839,
+      "sha256": "1b41074f7a5604f528dac6842baf7afccd79d7370b97ea3241944c275b67bec1"
+    },
+    {
+      "file": "v86.wasm",
+      "bytes": 2007347,
+      "sha256": "2f0c4150f266415b754a84a32e6f8e4c975a1d3abb94c78b047fa30027db1ef1"
+    },
+    {
+      "file": "v86-fallback.wasm",
+      "bytes": 2040034,
+      "sha256": "4eb64c9b7908d5931c1868eea4824b3a0a628eb86e6eac09d133776b50922d81"
+    }
+  ],
+  "redistributedEmulatorAssets": [
+    {
+      "file": "libv86.js",
+      "bytes": 360045,
+      "sha256": "2e4557c4b9066ea2c48170c3051ae681f1ef4da4a4cf17d0ae9e9985ca2e4255"
+    },
+    {
+      "file": "v86.wasm",
+      "bytes": 2007347,
+      "sha256": "2f0c4150f266415b754a84a32e6f8e4c975a1d3abb94c78b047fa30027db1ef1"
+    },
+    {
+      "file": "v86-fallback.wasm",
+      "bytes": 2040034,
+      "sha256": "4eb64c9b7908d5931c1868eea4824b3a0a628eb86e6eac09d133776b50922d81"
+    }
+  ],
+  "localPatches": [
+    {
+      "file": "libv86.js",
+      "description": "Export existing FetchNetworkAdapter and WispNetworkAdapter constructors as globalThis.TerrariumNetworkAdapters, and the generic VirtIO PCI transport as globalThis.TerrariumVirtIO. Terrarium implements its block-device request handler separately. No upstream algorithm is replaced.",
+      "implementation": "scripts/prepare-runtime.mjs"
+    }
+  ],
+  "guestAssetPolicy": "Fetched directly by the browser on explicit Boot, with byte-length and SHA-256 checks; not included in the repository or build output.",
+  "externalGuestAssets": [
+    {
+      "file": "buildroot-bzimage68.bin",
+      "role": "Linux kernel with embedded root filesystem",
+      "url": "https://i.copy.sh/buildroot-bzimage68.bin",
+      "bytes": 10068480,
+      "sha256": "507a759c70ab7a490a233be454d0b5b88bc667956a410b531cb4edc091e2eb1c",
+      "observedKernelVersion": "6.8.12",
+      "sourceBundleStatus": "Exact Buildroot configuration and complete corresponding source bundle not established; not redistributed by this project."
+    },
+    {
+      "file": "seabios.bin",
+      "role": "PC firmware",
+      "url": "https://raw.githubusercontent.com/copy/v86/cc37f35c43bf14865d74ad76879ecf9410f69eb1/bios/seabios.bin",
+      "bytes": 131072,
+      "sha256": "73e3f359102e3a9982c35fce98eb7cd08f18303ac7f1ba6ebfbe6cdc1c244d98",
+      "source": "https://github.com/coreboot/seabios/tree/rel-1.16.2",
+      "buildRecipe": "https://github.com/copy/v86/blob/cc37f35c43bf14865d74ad76879ecf9410f69eb1/bios/fetch-and-build-seabios.sh"
+    },
+    {
+      "file": "vgabios.bin",
+      "role": "VGA firmware",
+      "url": "https://raw.githubusercontent.com/copy/v86/cc37f35c43bf14865d74ad76879ecf9410f69eb1/bios/vgabios.bin",
+      "bytes": 36352,
+      "sha256": "a4bc0d80cc3ca028c73dafa8fee396b8d054ce87ebd8abfbd31b06b437607880",
+      "source": "https://github.com/coreboot/seabios/tree/rel-1.16.2",
+      "buildRecipe": "https://github.com/copy/v86/blob/cc37f35c43bf14865d74ad76879ecf9410f69eb1/bios/fetch-and-build-seabios.sh"
+    }
+  ],
+  "provenanceReference": "https://registry.npmjs.org/-/npm/v1/attestations/v86@0.5.472"
+}

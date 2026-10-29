@@ -1,0 +1,142 @@
+{
+  "indexPolicy": "Preserve initramfs text indexes and append exact ext2 closure entries; remove stale binary dep/alias/symbol indexes. BusyBox 1.37 modprobe reads text modules.dep/modules.alias/modules.symbols.",
+  "indexes": [
+    {
+      "appendedLines": [
+        "kernel/fs/ext2/ext2.ko: kernel/fs/mbcache.ko"
+      ],
+      "bytes": 10521,
+      "originalBytes": 10476,
+      "originalSha256": "df143bf46f788c5a63dc239d548573c21310506aa8a4cc96d6bc3add074cf907",
+      "path": "modules.dep",
+      "sha256": "eb62f8dbc3ecc9412c369c6d11195027f8307c43799470de4fd3f41a15902cd6",
+      "sourceBytes": 82683,
+      "sourceSha256": "3055d72d5e351d6a4d273d95c87388d8776ca86a474f65c00029199351b334d0"
+    },
+    {
+      "appendedLines": [
+        "alias fs-ext2 ext2"
+      ],
+      "bytes": 37196,
+      "originalBytes": 37177,
+      "originalSha256": "636048d9fd3bc650addba49340e691f50aac155d965b1dc00e70b919b37c16dd",
+      "path": "modules.alias",
+      "sha256": "5772d52a17240fa9831fc6830c4c012efed1c1bd3f0f80e9b67c78590805f6fc",
+      "sourceBytes": 97398,
+      "sourceSha256": "9c76f4bf3faa9ea220102ee84f885f77730ced16838902dc967cbb6baf61420a"
+    },
+    {
+      "appendedLines": [],
+      "bytes": 80204,
+      "originalBytes": 80204,
+      "originalSha256": "470ef55c9d9fef7af31c83d820afd052952a913843efeefeb01babac7f465aa4",
+      "path": "modules.symbols",
+      "sha256": "470ef55c9d9fef7af31c83d820afd052952a913843efeefeb01babac7f465aa4",
+      "sourceBytes": 268852,
+      "sourceSha256": "14001d66ff92f239a302c045bec48c1e80771a4dcf7e6396b49470e31bfa3cef"
+    }
+  ],
+  "kernelRelease": "6.12.38-0-virt",
+  "limitations": [
+    "No kernel/module recompilation or real guest execution is performed by this helper."
+  ],
+  "modules": [
+    {
+      "alreadyPresentIdentically": false,
+      "bytes": 282271,
+      "dependencies": [
+        "kernel/fs/mbcache.ko"
+      ],
+      "gid": 0,
+      "mode": "0644",
+      "modinfo": {
+        "alias": [
+          "fs-ext2"
+        ],
+        "author": [
+          "Remy Card and others"
+        ],
+        "depends": [
+          "mbcache"
+        ],
+        "description": [
+          "Second Extended Filesystem"
+        ],
+        "intree": [
+          "Y"
+        ],
+        "license": [
+          "GPL"
+        ],
+        "name": [
+          "ext2"
+        ],
+        "retpoline": [
+          "Y"
+        ],
+        "vermagic": [
+          "6.12.38-0-virt SMP preempt mod_unload modversions "
+        ]
+      },
+      "path": "kernel/fs/ext2/ext2.ko",
+      "sha256": "df5c8bd80a421814337fb29da079451e7d621339a03efbb9872b64574dced4b5",
+      "uid": 0
+    },
+    {
+      "alreadyPresentIdentically": true,
+      "bytes": 29151,
+      "dependencies": [],
+      "gid": 0,
+      "mode": "0644",
+      "modinfo": {
+        "author": [
+          "Jan Kara <jack@suse.cz>"
+        ],
+        "depends": [
+          ""
+        ],
+        "description": [
+          "Meta block cache (for extended attributes)"
+        ],
+        "intree": [
+          "Y"
+        ],
+        "license": [
+          "GPL"
+        ],
+        "name": [
+          "mbcache"
+        ],
+        "retpoline": [
+          "Y"
+        ],
+        "vermagic": [
+          "6.12.38-0-virt SMP preempt mod_unload modversions "
+        ]
+      },
+      "path": "kernel/fs/mbcache.ko",
+      "sha256": "e86598a297ced8fcb01ead1be6846e8d59beb24c31a528347d9083afa41dfa61",
+      "uid": 0
+    }
+  ],
+  "reader": {
+    "compression": "XZ via Python standard-library lzma",
+    "package": "PySquashfsImage",
+    "version": "0.9.0",
+    "wheelBytes": 43220,
+    "wheelSha256": "a8ea154bf946f985c65fab7d8c08dc73da7ad47a0aebf0d13ae50ae56e369f90"
+  },
+  "removeIndexes": [
+    "modules.alias.bin",
+    "modules.dep.bin",
+    "modules.symbols.bin"
+  ],
+  "schema": "terrarium.guest-module-supplement/v1",
+  "source": {
+    "isoBytes": 67108864,
+    "isoMember": "/boot/modloop-virt",
+    "isoSha256": "c72ea5ba6d3acd5dda963e3926032bd73aaef8f52ec1da71927ed1b59748d00c",
+    "modloopBytes": 20873216,
+    "modloopSha256": "2d6d9d7bf37bc2ad0c120670d8c0622eb68c46c59364733d568e2cd3da0991a4"
+  }
+}

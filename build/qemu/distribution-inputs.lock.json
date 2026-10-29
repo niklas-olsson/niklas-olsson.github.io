@@ -1,0 +1,201 @@
+{
+  "schema": "terrarium.qemu-distribution-inputs/v1",
+  "purpose": "Retained target component source material, distinct from compiled runtime inputs and prebuilt guest binary inputs",
+  "sourceRecipeRevision": "65d7de3fa8abb17af34345199476cd7f91d05715",
+  "firmwareGitlinkBasis": {
+    "repository": "https://github.com/ktock/qemu-wasm",
+    "commit": "0ef7b4e2814b231705d8371dd7997f5b72e70baf",
+    "treeEndpoint": "https://api.github.com/repos/ktock/qemu-wasm/git/trees/0ef7b4e2814b231705d8371dd7997f5b72e70baf?recursive=1"
+  },
+  "inputs": [
+    {
+      "origin": "lvm2",
+      "file": "LVM2.2.03.29.tgz",
+      "url": "https://mirrors.kernel.org/sourceware/lvm2/LVM2.2.03.29.tgz",
+      "sha512": "2d5dfde81007fcf34752b19e9edc9ab8189449f572429e973317b968c5a99b886dc26e81dc29c3cf5b7678da0f8a7e8c060431a33b950f6ff6279dfbddd9c7b2",
+      "aportsRecipe": "main/lvm2/APKBUILD",
+      "bytes": 2859529,
+      "sha256": "30c53776cb4ddf6bf9eca29d0c28dbf9c5ac170c09154321213b11c3dbb5be9c"
+    },
+    {
+      "origin": "apk-tools",
+      "file": "apk-tools-v2.14.6.tar.gz",
+      "url": "https://gitlab.alpinelinux.org/alpine/apk-tools/-/archive/v2.14.6/apk-tools-v2.14.6.tar.gz",
+      "sha512": "5be32716fda98939845c50daae5b9e226c1758f4d43a9b9eb50d7e54e700ff2d300b0b8af672a1dd8dd172e704594d04dcb9c7c487a13362359120600234c97c",
+      "aportsRecipe": "main/apk-tools/APKBUILD",
+      "bytes": 199574,
+      "sha256": "f2926026f2010130df929cb4a1c35b94879ba59aa9cb7465a6f686d4dfd8c7bf"
+    },
+    {
+      "origin": "busybox",
+      "file": "busybox-1.37.0.tar.bz2",
+      "url": "https://distfiles.alpinelinux.org/distfiles/v3.21/busybox-1.37.0.tar.bz2",
+      "sha512": "ad8fd06f082699774f990a53d7a73b189ed404fe0a2166aff13eae4d9d8ee5c9239493befe949c98801fe7897520dbff3ed0224faa7205854ce4fa975e18467e",
+      "aportsRecipe": "main/busybox/APKBUILD",
+      "bytes": 2565764,
+      "sha256": "3311dff32e746499f4df0d5df04d7eb396382d7e108bb9250e7b519b837043a4"
+    },
+    {
+      "origin": "ca-certificates",
+      "file": "ca-certificates-20250619.tar.bz2",
+      "url": "https://gitlab.alpinelinux.org/alpine/ca-certificates/-/archive/20250619/ca-certificates-20250619.tar.bz2",
+      "sha512": "803f714421b2293b99a52a812cf367e4f764152e1aedfbd31a261658d91540fd311394cbcb95a8055f417ed56291c6c99d33403954446ed84f6a9f728bdf002e",
+      "aportsRecipe": "main/ca-certificates/APKBUILD",
+      "bytes": 235770,
+      "sha256": "8727947e4b5370b775c4d188a7288b330afeb9cc6f9107052038c3a6e7cf2131"
+    },
+    {
+      "origin": "cryptsetup",
+      "file": "cryptsetup-2.7.5.tar.gz",
+      "url": "https://www.kernel.org/pub/linux/utils/cryptsetup/v2.7/cryptsetup-2.7.5.tar.gz",
+      "sha512": "1c2752baacca9c3ae6c507b9e86a0b31ee8b3d508d4233292ad3df432679b875810a4bef93eaa680e58203b04ca30e8e215c91a8a83d2c61905180633c372edf",
+      "aportsRecipe": "main/cryptsetup/APKBUILD",
+      "bytes": 13014900,
+      "sha256": "f2c6d22e53435de5d35dc9fdc86600d3e5e2227d27970b07a8e6a0f9f7bd42ac"
+    },
+    {
+      "file": "emscripten-047b825.tar.gz",
+      "url": "https://codeload.github.com/emscripten-core/emscripten/tar.gz/047b82506d6b471873300a5e4d1e690420b582d0",
+      "bytes": 29217341,
+      "sha256": "1e401854decf25a54dc4f52e18d6fed49affcf67edeed47702698a687213f5e4",
+      "origin": "emscripten",
+      "sourceCommit": "047b82506d6b471873300a5e4d1e690420b582d0",
+      "sourceCommitBasis": "pinned compiler emcc --version revision"
+    },
+    {
+      "file": "ipxe-4bd064d.tar.gz",
+      "url": "https://gitlab.com/qemu-project/ipxe/-/archive/4bd064de239dab2426b31c9789a1f4d78087dc63/ipxe-4bd064de239dab2426b31c9789a1f4d78087dc63.tar.gz",
+      "origin": "ipxe",
+      "sourceCommit": "4bd064de239dab2426b31c9789a1f4d78087dc63",
+      "sourceCommitBasis": "QEMU pinned tree gitlink roms/ipxe",
+      "bytes": 3894850,
+      "sha256": "4850691d6f196eaf4d6210f2de01383251b3ea1b928141da9ce28c0b06a90938"
+    },
+    {
+      "origin": "json-c",
+      "file": "json-c-0.18.tar.gz",
+      "url": "https://s3.amazonaws.com/json-c_releases/releases/json-c-0.18.tar.gz",
+      "sha512": "4763f2352414dac3599bc2183b4fa57dbfaac0ca24de890097bd7d0bdda93c91efa280f6566e949e6d94212ef39a63fc76c5f9d0c54ff3d04b13c859717dba5a",
+      "aportsRecipe": "main/json-c/APKBUILD",
+      "bytes": 401788,
+      "sha256": "876ab046479166b869afc6896d288183bbc0e5843f141200c677b3e8dfb11724"
+    },
+    {
+      "origin": "kmod",
+      "file": "kmod-33.tar.xz",
+      "url": "https://kernel.org/pub/linux/utils/kernel/kmod/kmod-33.tar.xz",
+      "sha512": "32d79d0bb7e89012f18458d4e88325f8e19a7dba6e1d5cff01aec3e618d1757b0f7c119735bf38d02e0d056a14273fd7522fca7c61a4d12a3ea5854bb662fff8",
+      "aportsRecipe": "main/kmod/APKBUILD",
+      "bytes": 514428,
+      "sha256": "dc768b3155172091f56dc69430b5481f2d76ecd9ccb54ead8c2540dbcf5ea9bc"
+    },
+    {
+      "origin": "libeconf",
+      "file": "libeconf-0.6.3.tar.gz",
+      "url": "https://github.com/openSUSE/libeconf/archive/refs/tags/v0.6.3.tar.gz",
+      "sha512": "6a177474efa03d4933c1fff85eaf159837b9c803d3be8a8e8a23c271bbcd38f5513bc30df37592721c1d139c36a698fb224be012fa947595c0e90904e22fdadb",
+      "aportsRecipe": "main/libeconf/APKBUILD",
+      "bytes": 240381,
+      "sha256": "98200166785a4d178d30e8b70cfc6296150a6afc900523d6faa242c16039bcd4"
+    },
+    {
+      "origin": "linux-lts",
+      "file": "linux-6.12.tar.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.tar.xz",
+      "sha512": "a37b1823df7b4f72542f689b65882634740ba0401a42fdcf6601d9efd2e132e5a7650e70450ba76f6cd1f13ca31180f2ccee9d54fe4df89bc0000ade4380a548",
+      "aportsRecipe": "main/linux-lts/APKBUILD",
+      "bytes": 147906904,
+      "sha256": "b1a2562be56e42afb3f8489d4c2a7ac472ac23098f1ef1c1e40da601f54625eb"
+    },
+    {
+      "origin": "mdev-conf",
+      "file": "mdev-conf-4.7.tar.gz",
+      "url": "https://gitlab.alpinelinux.org/alpine/mdev-conf/-/archive/4.7/mdev-conf-4.7.tar.gz",
+      "sha512": "340a2f788cb860591e2768769a81bda85522e38c3c855ac36c328b7d2e802d940da6ca0aae72e03171ef16ace701fecdee284e65ef74fa903a305234c89dc483",
+      "aportsRecipe": "main/mdev-conf/APKBUILD",
+      "bytes": 6915,
+      "sha256": "1c15535686084c0bc252d19a9e83bbf4cadc7c392d7f2f62313346af01bb73ab"
+    },
+    {
+      "origin": "mkinitfs",
+      "file": "mkinitfs-3.11.1.tar.gz",
+      "url": "https://gitlab.alpinelinux.org/alpine/mkinitfs/-/archive/3.11.1/mkinitfs-3.11.1.tar.gz",
+      "sha512": "25fe27c865afc8e3b7198226e64f059e6dcac186fbf61bc3238aa41dabed43ed7e18070fb687a44a15d9739c4deb4f8ab2b4a0e03a3f66ca38b0cb9f84c35479",
+      "aportsRecipe": "main/mkinitfs/APKBUILD",
+      "bytes": 40987,
+      "sha256": "6647b79968498e276b03520457ffc9677dd7f6cc2b9cc21c210cbae4a363946e"
+    },
+    {
+      "origin": "musl",
+      "file": "musl-1.2.5.tar.gz",
+      "url": "https://musl.libc.org/releases/musl-1.2.5.tar.gz",
+      "sha512": "7bb7f7833923cd69c7a1a9b8a5f1784bfd5289663eb6061dcd43d583e45987df8a68a1be05d75cc1c88a3f5b610653d1a70f4a9cff4d8f7fd41ae73ee058c17c",
+      "aportsRecipe": "main/musl/APKBUILD",
+      "bytes": 1080786,
+      "sha256": "a9a118bbe84d8764da0ea0d28b3ab3fae8477fc7e4085d90102b8596fc7c75e4"
+    },
+    {
+      "origin": "openssl",
+      "file": "openssl-3.3.4.tar.gz",
+      "url": "https://github.com/openssl/openssl/releases/download/openssl-3.3.4/openssl-3.3.4.tar.gz",
+      "sha512": "7f01240b745ee6b3af6935ec3fd3be700f7be243b092d3265f160f1da12d52efb562755fb2b41240bc12a22a2ec7440fb21d4c53183c6a91c4182e0e8a2adfb1",
+      "aportsRecipe": "main/openssl/APKBUILD",
+      "bytes": 18113350,
+      "sha256": "8d1a5fc323d3fd351dc05458457fd48f78652d2a498e1d70ffea07b4d0eb3fa8"
+    },
+    {
+      "origin": "linux-lts",
+      "file": "patch-6.12.38.patch.xz",
+      "url": "https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.12.38.xz",
+      "sha512": "ba24b744a5ccf441234b59a274d6f7d62e082144aff05f4e7acd0cba7c36e969536073e9884398a25e113ccbbf6c938d1e6e068e8d029a8650d7b62788c0bf58",
+      "aportsRecipe": "main/linux-lts/APKBUILD",
+      "bytes": 2489864,
+      "sha256": "ab114b740d77cea374f8c2e4a04b9ea91a35eff5e743ffa2b7c483a8e7b06604"
+    },
+    {
+      "origin": "pax-utils",
+      "file": "pax-utils-1.3.8.tar.xz",
+      "url": "https://dev.gentoo.org/~sam/distfiles/app-misc/pax-utils/pax-utils-1.3.8.tar.xz",
+      "sha512": "0dde95f86802729d80b7b38af84dec636e973f6abc70600633edcb05d3d5f95c1b2861300ce478dd7f798c7a1e5eccb1011c06c53adba38e11a996b69d463656",
+      "aportsRecipe": "main/pax-utils/APKBUILD",
+      "bytes": 123556,
+      "sha256": "12a168d1aeae2626efdbde3979da88a60ca80bb38e1db565e95ee441ff1d5a0c"
+    },
+    {
+      "file": "seabios-a6ed6b7.tar.gz",
+      "url": "https://gitlab.com/qemu-project/seabios/-/archive/a6ed6b701f0a57db0569ab98b0661c12a6ec3ff8/seabios-a6ed6b701f0a57db0569ab98b0661c12a6ec3ff8.tar.gz",
+      "origin": "seabios",
+      "sourceCommit": "a6ed6b701f0a57db0569ab98b0661c12a6ec3ff8",
+      "sourceCommitBasis": "QEMU pinned tree gitlink roms/seabios",
+      "bytes": 637031,
+      "sha256": "bcd1870471d10c3fdd8ce7875545a1bad9c87f1ce69f283a15a7e803a414d9c2"
+    },
+    {
+      "origin": "util-linux",
+      "file": "util-linux-2.40.4.tar.xz",
+      "url": "https://www.kernel.org/pub/linux/utils/util-linux/v2.40/util-linux-2.40.4.tar.xz",
+      "sha512": "0024955056ba7b4c54040a917f9919f49692e57ba6d42d17a6c29c1eefe88bf48b1214a545072b71c468829a63a8f15237f49733e9127c134e11126d1e435124",
+      "aportsRecipe": "main/util-linux/APKBUILD",
+      "bytes": 8848216,
+      "sha256": "5c1daf733b04e9859afdc3bd87cc481180ee0f88b5c0946b16fdec931975fb79"
+    },
+    {
+      "origin": "xz",
+      "file": "xz-5.6.3.tar.gz",
+      "url": "https://github.com/tukaani-project/xz/archive/refs/tags/v5.6.3/xz-5.6.3.tar.gz",
+      "sha512": "0f814f4282c87cb74a8383199c1e55ec1bf49519daaf07f7b376cb644770b75cc9257c809b661405fcfd6cda28c54d799c67eb9e169665c35b1b87529468085e",
+      "aportsRecipe": "main/xz/APKBUILD",
+      "bytes": 1342106,
+      "sha256": "1256ba1212249569e572ffe412635becbe4b033145ba30ff24dcb7e9c6c04b27"
+    },
+    {
+      "origin": "zstd",
+      "file": "zstd-1.5.6.tar.gz",
+      "url": "https://github.com/facebook/zstd/archive/v1.5.6.tar.gz",
+      "sha512": "ca12dffd86618ca008e1ecc79056c1129cb4e61668bf13a3cd5b2fa5c93bc9c92c80f64c1870c68b9c20009d9b3a834eac70db72242d5106125a1c53cccf8de8",
+      "aportsRecipe": "main/zstd/APKBUILD",
+      "bytes": 2425452,
+      "sha256": "30f35f71c1203369dc979ecde0400ffea93c27391bfd2ac5a9715d2173d92ff7"
+    }
+  ]
+}

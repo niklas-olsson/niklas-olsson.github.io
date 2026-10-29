@@ -1,0 +1,751 @@
+{
+  "schema": "terrarium.aports-source-map/v1",
+  "meaning": "Retained package recipe Git object identities; no execution or validation receipts included.",
+  "packages": [
+    {
+      "origin": "alpine-base",
+      "packageBuildCommit": "65d7de3fa8abb17af34345199476cd7f91d05715",
+      "releaseRecipeCommit": "65d7de3fa8abb17af34345199476cd7f91d05715",
+      "files": [
+        {
+          "name": "APKBUILD",
+          "type": "file",
+          "gitObjectSha": "1dbc8d4e17084bc24584c34d7a6a4737cd085a91"
+        }
+      ]
+    },
+    {
+      "origin": "alpine-baselayout",
+      "packageBuildCommit": "5f0cd7890349e7fe11128478ac506c709805224d",
+      "releaseRecipeCommit": "65d7de3fa8abb17af34345199476cd7f91d05715",
+      "files": [
+        {
+          "name": "20locale.sh",
+          "type": "file",
+          "gitObjectSha": "9b9fde51f510e8d4ddb79f3ea0423ec75efb9297"
+        },
+        {
+          "name": "APKBUILD",
+          "type": "file",
+          "gitObjectSha": "4ed8730dbfd78d60bee5d05d53b04a1bf15986d3"
+        },
+        {
+          "name": "aliases.conf",
+          "type": "file",
+          "gitObjectSha": "b1790179608c46f117fd36073e2316546ca08acd"
+        },
+        {
+          "name": "alpine-baselayout.post-install",
+          "type": "file",
+          "gitObjectSha": "88966d35c3327efc03e5d383fa577782ea256c5d"
+        },
+        {
+          "name": "alpine-baselayout.post-upgrade",
+          "type": "file",
+          "gitObjectSha": "0e73fc07f3bfd966d5ed2e4be2a4838422dab0ed"
+        },
+        {
+          "name": "alpine-baselayout.pre-install",
+          "type": "file",
+          "gitObjectSha": "fc0d0b9f5dab5ce07189ead013e0fb8a6fbc0bc8"
+        },
+        {
+          "name": "alpine-baselayout.pre-upgrade",
+          "type": "file",
+          "gitObjectSha": "b89ad05a74debf8a6f6001b05526770feb40ee88"
+        },
+        {
+          "name": "blacklist.conf",
+          "type": "file",
+          "gitObjectSha": "1cf7e1aa24591793c9f638c0e0dd63ec25aab345"
+        },
+        {
+          "name": "color_prompt.sh.disabled",
+          "type": "file",
+          "gitObjectSha": "96e47891b31f72ed8f4073061ff48288a4d3cb7b"
+        },
+        {
+          "name": "crontab",
+          "type": "file",
+          "gitObjectSha": "fd8acd8b9a27203f33bd213e9a38d975cbef8dcc"
+        },
+        {
+          "name": "group",
+          "type": "file",
+          "gitObjectSha": "4a0d291366667f110e5f4d890c585f929fba517e"
+        },
+        {
+          "name": "i386.conf",
+          "type": "file",
+          "gitObjectSha": "b89459f1ef675fced8b3fcf97cca1a4ed0e55f01"
+        },
+        {
+          "name": "inittab",
+          "type": "file",
+          "gitObjectSha": "5294b8f53b1c9946e66bf75b37644af6cd94cfb1"
+        },
+        {
+          "name": "kms.conf",
+          "type": "file",
+          "gitObjectSha": "80974a6ed1c0d6cd2290bc587b6ef7adf1bdf34b"
+        },
+        {
+          "name": "passwd",
+          "type": "file",
+          "gitObjectSha": "1130fa0b21cc1bf66f41206ffad4748ffe457af1"
+        },
+        {
+          "name": "profile",
+          "type": "file",
+          "gitObjectSha": "fbc3ba0cd506424c1b67b1a2397aa1097803ad25"
+        }
+      ]
+    },
+    {
+      "origin": "alpine-keys",
+      "packageBuildCommit": "6d473fb38effb2389f567b29fb7eb27039b3a279",
+      "releaseRecipeCommit": "65d7de3fa8abb17af34345199476cd7f91d05715",
+      "files": [
+        {
+          "name": "APKBUILD",
+          "type": "file",
+          "gitObjectSha": "42acdc5d0e15bd83ae59b128ed584ccdb125cd09"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-4a6a0840.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "bb4bdc80fd10d0609f67076f05e17aafdff75415"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-5243ef4b.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "6cbfad7441d0193d6f2f64dfb47797975bcc54b1"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-524d27bb.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "1d34c93e37843fc494ae8d685d08665e844fecba"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-5261cecb.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "83f0658e9ca16c4bad20a219318497313a45b7bb"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-58199dcc.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "2b99a0d195116f2c7ba081747da873f9b74b07d4"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-58cbb476.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "a9ead55ed05182378d50e40ff94f15eac1b40419"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-58e4f17d.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "8f990949b9e70dd3be886664e5c4a41dc67c1ecb"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-5e69ca50.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "097740ebd32935ed9b6b2f9e7bd227320fb4dabd"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-60ac2099.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "2b8a4a93e060a3c03a2e482a0dc959aa06542282"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-6165ee59.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "f2165aebadab1c1e43798f1278c3897d85f16da1"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-61666e3f.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "aa63d81d6625e3b16d87db1946b69466f3bd2095"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-616a9724.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "59c330e9f73cc10ae21bf94062711637141cf81b"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-616abc23.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "915bc566b7429b7ee6ca06b0947163c49d496dda"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-616ac3bc.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "1e49d246902b76996e4eefb52c7ae61cc09f45f9"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-616adfeb.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "bb15efe96d7c95a0602b243ce0848aa42cf80020"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-616ae350.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "0ecbccc2e4aea1d7394ace8f9a896b061a821453"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-616db30d.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "ceffa3ace9c4454c8cde399732ecee535a13efac"
+        },
+        {
+          "name": "alpine-devel@lists.alpinelinux.org-66ba20fe.rsa.pub",
+          "type": "file",
+          "gitObjectSha": "e8bb47600fed4bdace8a3c366cd3762aec119933"
+        }
+      ]
+    },
+    {
+      "origin": "apk-tools",
+      "packageBuildCommit": "41847d6ccff08940b5bf1ba0d6005e95897039f9",
+      "releaseRecipeCommit": "65d7de3fa8abb17af34345199476cd7f91d05715",
+      "files": [
+        {
+          "name": "APKBUILD",
+          "type": "file",
+          "gitObjectSha": "7df233e5d369853481253177762eac9c949b37c2"
+        },
+        {
+          "name": "_apk",
+          "type": "file",
+          "gitObjectSha": "20dac3de4a1ed7cff5783feed9b1bda7edc60dea"
+        },
+        {
+          "name": "db-fix-apk_cache_download.patch",
+          "type": "file",
+          "gitObjectSha": "40b48c1f513a5fc91e795e7598fcadb7175c9478"
+        },
+        {
+          "name": "solver-make-dependencies-only-packages-selectable.patch",
+          "type": "file",
+          "gitObjectSha": "0accf2188e63cb0b51017f4f2d0ee1455a43f06f"
+        }
+      ]
+    },
+    {
+      "origin": "busybox",
+      "packageBuildCommit": "9c49608930ef6a9936750e9e39edec56b3db9cd5",
+      "releaseRecipeCommit": "65d7de3fa8abb17af34345199476cd7f91d05715",
+      "files": [
+        {
+          "name": "0001-awk-fix-handling-of-literal-backslashes-in-replaceme.patch",
+          "type": "file",
+          "gitObjectSha": "3ff61ace0646523576ff583ebdcece18c4563c38"
+        },
+        {
+          "name": "0001-hexdump-fix-regression-with-n4-e-u.patch",
+          "type": "file",
+          "gitObjectSha": "8b714b2eb4858232ab8e3460d03e534f606ec723"
+        },
+        {
+          "name": "0001-tunctl-fix-segfault-on-ioctl-failure.patch",
+          "type": "file",
+          "gitObjectSha": "d2b9e307eacdbc7a7a92e33c73d06e3d8e6ffc07"
+        },
+        {
+          "name": "0001-wget-add-header-Accept.patch",
+          "type": "file",
+          "gitObjectSha": "2b2ee3780a3ee8601581cec8762f60faf0b8e69e"
+        },
+        {
+          "name": "0002-adduser-default-to-sbin-nologin-as-shell-for-system-.patch",
+          "type": "file",
+          "gitObjectSha": "e6d8f6ace28b4305c85d97f76949f04299d2491f"
+        },
+        {
+          "name": "0003-ash-add-built-in-BB_ASH_VERSION-variable.patch",
+          "type": "file",
+          "gitObjectSha": "5e397b2401ad2542d46017844159f095412fd1e1"
+        },
+        {
+          "name": "0004-Avoid-redefined-warnings-when-buiding-with-utmps.patch",
+          "type": "file",
+          "gitObjectSha": "c17164c85164405a24995096d7d2d6a42a972fea"
+        },
+        {
+          "name": "0005-libbb-sockaddr2str-ensure-only-printable-characters-.patch",
+          "type": "file",
+          "gitObjectSha": "1d37b08e2ebec463f338a31e984190f6823a643d"
+        },
+        {
+          "name": "0006-modinfo-add-k-option-for-kernel-version.patch",
+          "type": "file",
+          "gitObjectSha": "30f342cfdfb48c68504be1148cc4cb701610098d"
+        },
+        {
+          "name": "0007-nologin-Install-applet-to-sbin-instead-of-usr-sbin.patch",
+          "type": "file",
+          "gitObjectSha": "c0a1cb5bb43779455c1a07c3fb5551a0aee54e50"
+        },
+        {
+          "name": "0008-pgrep-add-support-for-matching-against-UID-and-RUID.patch",
+          "type": "file",
+          "gitObjectSha": "bb362304b4bb8c245a48eb7a6b66386d1b60c8e9"
+        },
+        {
+          "name": "0009-properly-fix-wget-https-support.patch",
+          "type": "file",
+          "gitObjectSha": "849bd15b01fce9004397b03e311ebc0b5b53ba41"
+        },
+        {
+          "name": "0010-fsck-resolve-LABEL-.-UUID-.-spec-to-device.patch",
+          "type": "file",
+          "gitObjectSha": "d5dc8b2e44463fddeddf147cf745abca875053a7"
+        },
+        {
+          "name": "0011-nslookup-sanitize-all-printed-strings-with-printable.patch",
+          "type": "file",
+          "gitObjectSha": "3263d61f2a3630875f4a66ee873da4a85edf7df1"
+        },
+        {
+          "name": "0012-ash-exec-busybox.static.patch",
+          "type": "file",
+          "gitObjectSha": "7d49daee94b5b757d1b13cff06a869d8b5bf7329"
+        },
+        {
+          "name": "0013-app-location-for-cpio-vi-and-lspci.patch",
+          "type": "file",
+          "gitObjectSha": "b3ee65f19cf1682152bb7009f44cb91510c1edc4"
+        },
+        {
+          "name": "0014-udhcpc-set-default-discover-retries-to-5.patch",
+          "type": "file",
+          "gitObjectSha": "bab8bcd15f2c5b3e912974bddbb9e8be274f9b87"
+        },
+        {
+          "name": "0015-ping-make-ping-work-without-root-privileges.patch",
+          "type": "file",
+          "gitObjectSha": "fc75470021d48c5ad7f723acaf6bef446887fd48"
+        },
+        {
+          "name": "0016-fbsplash-support-console-switching.patch",
+          "type": "file",
+          "gitObjectSha": "8bba26a6d8379bf9198a5dc9a493ad75bf1ff35b"
+        },
+        {
+          "name": "0017-fbsplash-support-image-and-bar-alignment-and-positio.patch",
+          "type": "file",
+          "gitObjectSha": "bec3e08dd5509eabb974a60a33b1d871169f8149"
+        },
+        {
+          "name": "0018-depmod-support-generating-kmod-binary-index-files.patch",
+          "type": "file",
+          "gitObjectSha": "f37b637af3d94a784c6e1de3d60dd223ef11f59c"
+        },
+        {
+          "name": "0019-Add-flag-for-not-following-symlinks-when-recursing.patch",
+          "type": "file",
+          "gitObjectSha": "466bd5646750d677f028356bf0d59b78d4459c3b"
+        },
+        {
+          "name": "0020-udhcpc-Don-t-background-if-n-is-given.patch",
+          "type": "file",
+          "gitObjectSha": "eb76936fa85c891a7cfa02f6004112641915f25c"
+        },
+        {
+          "name": "0021-tests-fix-tarball-creation.patch",
+          "type": "file",
+          "gitObjectSha": "57a89693ae9e0c1e1f37dd7c2ea5ab572f0f730b"
+        },
+        {
+          "name": "0022-tests-musl-doesn-t-seem-to-recognize-UTC0-as-a-timez.patch",
+          "type": "file",
+          "gitObjectSha": "ee49449e7f362e3955e455c1f282e4af216ef218"
+        },
+        {
+          "name": "0023-Hackfix-to-disable-HW-acceleration-for-MD5-SHA1-on-x.patch",
+          "type": "file",
+          "gitObjectSha": "5bf2387d9352cd6ab3e340a57caa1daa9b652d78"
+        },
+        {
+          "name": "0024-umount-Implement-O-option-to-unmount-by-mount-option.patch",
+          "type": "file",
+          "gitObjectSha": "6110c04b29d7468abe4624acfab823a180ed626f"
+        },
+        {
+          "name": "0025-find-fix-xdev-depth-and-delete.patch",
+          "type": "file",
+          "gitObjectSha": "7363ea6df521e46b454018a7ac8027adf13a630f"
+        },
+        {
+          "name": "0026-awk.c-fix-CVE-2023-42366-bug-15874.patch",
+          "type": "file",
+          "gitObjectSha": "1e2bce7c2b142617e8f9c04684f03e1229599d44"
+        },
+        {
+          "name": "0027-awk-Mark-test-for-handling-of-start-of-word-pattern-.patch",
+          "type": "file",
+          "gitObjectSha": "2c2931587f947d3c9d9afbd8a6294f90990adbfc"
+        },
+        {
+          "name": "0028-od-Skip-od-B-on-big-endian.patch",
+          "type": "file",
+          "gitObjectSha": "e2747465cc1bc2a4ce8c4b57225f9694f03e4559"
+        },
+        {
+          "name": "0029-ash-reject-unknown-long-options.patch",
+          "type": "file",
+          "gitObjectSha": "49b8171bad19780b45bf1b9f66a815e015b04596"
+        },
+        {
+          "name": "0030-hexdump-Skip-a-single-test-on-big-endian-systems.patch",
+          "type": "file",
+          "gitObjectSha": "f1ba3bd7cc859f1fd4a3d66764a450b177531495"
+        },
+        {
+          "name": "0031-syslogd-fix-wrong-OPT_locallog-flag-detection.patch",
+          "type": "file",
+          "gitObjectSha": "efb1410b2280b68f6d39578d1ba9dd18b853bd7a"
+        },
+        {
+          "name": "0032-lineedit-fix-some-tab-completions-written-to-stdout.patch",
+          "type": "file",
+          "gitObjectSha": "c78be1d03cf9d1f1f1082dc328409c46d2ba767b"
+        },
+        {
+          "name": "0033-lineedit-use-stdout-for-shell-history-builtin.patch",
+          "type": "file",
+          "gitObjectSha": "e5238e3e8773c183f34e7126b583c35be6f2e214"
+        },
+        {
+          "name": "0034-adduser-remove-preconfigured-GECOS-full-name-field.patch",
+          "type": "file",
+          "gitObjectSha": "aeb47b83e248a27fd8450be5517331d525f246f8"
+        },
+        {
+          "name": "APKBUILD",
+          "type": "file",
+          "gitObjectSha": "2656c6609ac65cdf9c456051fd57d8db5eba308b"
+        },
+        {
+          "name": "acpid-poweroff.sh",
+          "type": "file",
+          "gitObjectSha": "7836c5a609795cfd99e7181416be5cf5c7f6b6fc"
+        },
+        {
+          "name": "acpid.initd",
+          "type": "file",
+          "gitObjectSha": "ec31833ad7fa3e81591061d9062c4f160f439e68"
+        },
+        {
+          "name": "acpid.logrotate",
+          "type": "file",
+          "gitObjectSha": "4cf5fdda97e154c56e55a1d75925fe361a35b2b9"
+        },
+        {
+          "name": "bbsuid.c",
+          "type": "file",
+          "gitObjectSha": "24d0d7d3e3abe077b4cdc0615df066f7ca3b6462"
+        },
+        {
+          "name": "busybox-extras.post-install",
+          "type": "file",
+          "gitObjectSha": "dc663a554fd7a8fc1a3c1e15477fae249a399dee"
+        },
+        {
+          "name": "busybox-extras.pre-deinstall",
+          "type": "file",
+          "gitObjectSha": "2634c6a31cb022233b8e111d3884e9a768c1f9b9"
+        },
+        {
+          "name": "busybox.post-install",
+          "type": "file",
+          "gitObjectSha": "f575396bb1a66c0a4f07c838ee908fc08201cc2d"
+        },
+        {
+          "name": "busybox.post-upgrade",
+          "type": "file",
+          "gitObjectSha": "98822a226f756554b56115a5d6f14552808278dd"
+        },
+        {
+          "name": "busybox.trigger",
+          "type": "file",
+          "gitObjectSha": "65a9b6b5bb0dd764829451f7175f3fdead8746fb"
+        },
+        {
+          "name": "busyboxconfig",
+          "type": "file",
+          "gitObjectSha": "d5ba80af20b16ffd41fbdd1b642efb11e79815bc"
+        },
+        {
+          "name": "busyboxconfig-extras",
+          "type": "file",
+          "gitObjectSha": "1227cbc5695a920cc58b536815170d592ed4c13a"
+        },
+        {
+          "name": "crond.confd",
+          "type": "file",
+          "gitObjectSha": "542af1ed1d75d417aafbe2b14741ef2ce0b3d645"
+        },
+        {
+          "name": "crond.initd",
+          "type": "file",
+          "gitObjectSha": "992037210b694e3dd6a849fc2b97fd6351b4c61c"
+        },
+        {
+          "name": "dad.if-up",
+          "type": "file",
+          "gitObjectSha": "7903822c8fd25941ea82c12b30ec7a90bf5b710b"
+        },
+        {
+          "name": "default.script",
+          "type": "file",
+          "gitObjectSha": "fd66e830c62235910ebe69407dde850daf2f3d4a"
+        },
+        {
+          "name": "dnsd.initd",
+          "type": "file",
+          "gitObjectSha": "42e4a34c13a96091c62ea81f6124125a08bddfb1"
+        },
+        {
+          "name": "httpd.initd",
+          "type": "file",
+          "gitObjectSha": "bf9573052134f1aa6763fb7cb2c04325c4fb5496"
+        },
+        {
+          "name": "inetd.initd",
+          "type": "file",
+          "gitObjectSha": "5ef7b395ff9b2b406ea3f081258bbe9b52251d43"
+        },
+        {
+          "name": "klogd.confd",
+          "type": "file",
+          "gitObjectSha": "100deedaac53882975ef8f037f91abd5ab44b0b2"
+        },
+        {
+          "name": "klogd.initd",
+          "type": "file",
+          "gitObjectSha": "274b7d969131d6c6ccc2282d9048d92c8a77a18e"
+        },
+        {
+          "name": "loadkmap.confd",
+          "type": "file",
+          "gitObjectSha": "2bdbc0608c2a843dff2c498854b7095e1c4269dc"
+        },
+        {
+          "name": "loadkmap.initd",
+          "type": "file",
+          "gitObjectSha": "7149dd729e05b9dee91bc2809b8f496e73914104"
+        },
+        {
+          "name": "mdev.initd",
+          "type": "file",
+          "gitObjectSha": "630d83777d61314f47cf2ecdf33c02cc54b23551"
+        },
+        {
+          "name": "ntpd.confd",
+          "type": "file",
+          "gitObjectSha": "c5b4c1c1d435f7c360bc047dac623e3469912a13"
+        },
+        {
+          "name": "ntpd.initd",
+          "type": "file",
+          "gitObjectSha": "17ca150e9e91db826f0080ed507357d307b67d3b"
+        },
+        {
+          "name": "rdate.confd",
+          "type": "file",
+          "gitObjectSha": "03eadfdb1fbcba276898135d23b6d2da492038fa"
+        },
+        {
+          "name": "rdate.initd",
+          "type": "file",
+          "gitObjectSha": "708429f17bb025adc6eba9638f182011f6867d71"
+        },
+        {
+          "name": "securetty",
+          "type": "file",
+          "gitObjectSha": "f33a1c15c821d17233d2813606d69b6f3b523fa7"
+        },
+        {
+          "name": "ssl_client.c",
+          "type": "file",
+          "gitObjectSha": "45c62a5c80b64f3ef212d76d7cdd11a14b3013b1"
+        },
+        {
+          "name": "syslog.confd",
+          "type": "file",
+          "gitObjectSha": "2f00667118c696126cdc6266f0a98c9dbd19e6ad"
+        },
+        {
+          "name": "syslog.initd",
+          "type": "file",
+          "gitObjectSha": "3b20345d7065a89aeca61212f0c9d8f9d5357d59"
+        },
+        {
+          "name": "udhcpc.conf",
+          "type": "file",
+          "gitObjectSha": "0407c553ffb5ab4ac52f9a14a4c2bddd1b4365c1"
+        },
+        {
+          "name": "udhcpd.initd",
+          "type": "file",
+          "gitObjectSha": "e4dabd5b343f0fc717990a8d9372dec4d6846765"
+        },
+        {
+          "name": "watchdog.confd",
+          "type": "file",
+          "gitObjectSha": "5cfd2c2cc40ae9a6d0cd96ac7d993d000b6a8564"
+        },
+        {
+          "name": "watchdog.initd",
+          "type": "file",
+          "gitObjectSha": "d87210044a0d1c73908dc06ee34acc6613bb84a3"
+        }
+      ]
+    },
+    {
+      "origin": "ca-certificates",
+      "packageBuildCommit": "21ea87aa08cbcfd98dd917b4af095bd91f5e8fca",
+      "releaseRecipeCommit": "65d7de3fa8abb17af34345199476cd7f91d05715",
+      "files": [
+        {
+          "name": "APKBUILD",
+          "type": "file",
+          "gitObjectSha": "656d4d504bac487614a4c9a9144666fc64c7cb00"
+        },
+        {
+          "name": "ca-certificates.post-deinstall",
+          "type": "file",
+          "gitObjectSha": "10d219f03f526641af8a366db975b010b3c260e1"
+        },
+        {
+          "name": "ca-certificates.trigger",
+          "type": "file",
+          "gitObjectSha": "a68e9c7d92858513ca618280568222d67c81548d"
+        }
+      ]
+    },
+    {
+      "origin": "musl",
+      "packageBuildCommit": "efd4d5df7be0ea48d98512671f676fc5ceb14899",
+      "releaseRecipeCommit": "65d7de3fa8abb17af34345199476cd7f91d05715",
+      "files": [
+        {
+          "name": "APKBUILD",
+          "type": "file",
+          "gitObjectSha": "8c376ed07168827e127e51a86cd08d9b1f17fd47"
+        },
+        {
+          "name": "CVE-2025-26519.patch",
+          "type": "file",
+          "gitObjectSha": "8d5ba6cc8390c322cac11070911df61f48572172"
+        },
+        {
+          "name": "__stack_chk_fail_local.c",
+          "type": "file",
+          "gitObjectSha": "2b403a6e046fb288af4b3d16eda76980a599aea4"
+        },
+        {
+          "name": "getconf.c",
+          "type": "file",
+          "gitObjectSha": "c4235242b0ef70bb7a99cb210a134d19c15dc0b9"
+        },
+        {
+          "name": "getent.c",
+          "type": "file",
+          "gitObjectSha": "c2ed4c6cf9589b9a2a5dde7a5beaf3dc61de2db1"
+        },
+        {
+          "name": "handle-aux-at_base.patch",
+          "type": "file",
+          "gitObjectSha": "7c9f2dc5fc05abaf82f2e7b59704862b325c0aab"
+        },
+        {
+          "name": "iconv.c",
+          "type": "file",
+          "gitObjectSha": "f5d5ce2aa730461df126cdf8bc8b084b4ebb881c"
+        },
+        {
+          "name": "isatty-glibc-align.patch",
+          "type": "file",
+          "gitObjectSha": "d73ee79a92373d6c6b9e4e7afeb54a5f2fc172c1"
+        },
+        {
+          "name": "ldconfig",
+          "type": "file",
+          "gitObjectSha": "ccf7c2aa4d2f779e86bdcc0cd681f8f2361f1e85"
+        },
+        {
+          "name": "ldso-fix-non-functional-fix-to-early-dynamic-PAGE_SI.patch",
+          "type": "file",
+          "gitObjectSha": "05bbd99d7f483bf57ccbd5083c8530126fc5c273"
+        },
+        {
+          "name": "loongarch64-Add-lsx-and-lasx-vector-structure-defini.patch",
+          "type": "file",
+          "gitObjectSha": "4cc1d296ae339af698d277c3f63e1582d50ae8e9"
+        },
+        {
+          "name": "loongarch64-add-TLSDESC-support.patch",
+          "type": "file",
+          "gitObjectSha": "17b07138d95bab71b860f01dd8958fb8630db273"
+        },
+        {
+          "name": "loongarch64-add-bits-hwcap.h.patch",
+          "type": "file",
+          "gitObjectSha": "92581675627e46b48367091a468b16c2a94fddf0"
+        },
+        {
+          "name": "loongarch64-add-fpu-and-simd-context-to-signal.h.patch",
+          "type": "file",
+          "gitObjectSha": "9eea20e136e949dc5ba6acdd1c6c1520c2d12e96"
+        }
+      ]
+    },
+    {
+      "origin": "openssl",
+      "packageBuildCommit": "e247b0d362f16b75502452fbd6d569496ef432f1",
+      "releaseRecipeCommit": "65d7de3fa8abb17af34345199476cd7f91d05715",
+      "files": [
+        {
+          "name": "APKBUILD",
+          "type": "file",
+          "gitObjectSha": "c7917279651103e2fb65ef7e7daa4d271a483a36"
+        },
+        {
+          "name": "auxv.patch",
+          "type": "file",
+          "gitObjectSha": "90a2aea880915a54dbfb2ab43a2c65657486dbf4"
+        },
+        {
+          "name": "man-section.patch",
+          "type": "file",
+          "gitObjectSha": "c1f96cede25e1aeaf8b2b1ee5478845106f7b2aa"
+        }
+      ]
+    },
+    {
+      "origin": "pax-utils",
+      "packageBuildCommit": "398a5aee3025ec8a4d0d761e448dc86ac777fa09",
+      "releaseRecipeCommit": "65d7de3fa8abb17af34345199476cd7f91d05715",
+      "files": [
+        {
+          "name": "APKBUILD",
+          "type": "file",
+          "gitObjectSha": "76483d72aa80cebe8b31eb031e13ec1bcb748ab6"
+        }
+      ]
+    },
+    {
+      "origin": "zlib",
+      "packageBuildCommit": "4c2722e7ecc1c5e3ba882429044a101497121223",
+      "releaseRecipeCommit": "65d7de3fa8abb17af34345199476cd7f91d05715",
+      "files": [
+        {
+          "name": "APKBUILD",
+          "type": "file",
+          "gitObjectSha": "1568356d1bfd174c79bc446fb03cdc086bc0462e"
+        }
+      ]
+    }
+  ]
+}

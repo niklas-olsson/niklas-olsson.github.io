@@ -1,0 +1,125 @@
+{
+  "schema": "terrarium.qemu-provenance/v1",
+  "upstreamArtifactRepository": "https://github.com/ktock/qemu-wasm-demo-images",
+  "upstreamArtifactCommit": "b7c549b5e6f4c376f76483a03e983214421434ad",
+  "observedEmulatorVersion": "8.2.0",
+  "sourceRepository": "https://github.com/ktock/qemu-wasm",
+  "referenceBuildRecipe": "https://github.com/ktock/qemu-wasm-demo/blob/0208c86ea45253c26c0ea6907f6db2dec89eb7b2/create-images.sh",
+  "referenceGuestRecipe": "https://github.com/ktock/qemu-wasm/tree/0ef7b4e2814b231705d8371dd7997f5b72e70baf/examples/x86_64-alpine/image",
+  "correspondingSourceStatus": "The image repository pins exact executable bytes. The source commit that produced those binary bytes is not attested by that repository. Reference recipes describe the integration; they are not a bit-for-bit rebuild attestation. QEMU JS/Wasm, firmware, kernel and root image remain upstream downloads.",
+  "emulatorLicense": "GPL-2.0, with separately licensed components; see QEMU-LICENSE.txt and QEMU-COPYING.txt",
+  "localAssets": [
+    {
+      "file": "qemu-system-x86_64.worker.js",
+      "bytes": 6458,
+      "sha256": "186440bb0507c34222ba52f4600c58080ea83d2158bd9d22c2faa6f038cf4dae"
+    },
+    {
+      "file": "alpine-packages.json",
+      "bytes": 1163122,
+      "sha256": "a8785aa9e14b50cfb9e95ae43cca7d992e635c52fbeae2cfbea5bfabf33a3ec0"
+    }
+  ],
+  "localLoaderLicense": "MIT; complete upstream license header retained. Nonfunctional comment cleanup and deterministic browser bootstrap adaptation are recorded in localLoaderSource; full license in Emscripten-LICENSE.txt",
+  "downloadedAssets": {
+    "wasm": {
+      "name": "QEMU x86_64 WebAssembly runtime",
+      "url": "https://raw.githubusercontent.com/ktock/qemu-wasm-demo-images/b7c549b5e6f4c376f76483a03e983214421434ad/alpine-x86_64/qemu-system-x86_64.wasm",
+      "bytes": 40799480,
+      "sha256": "f53107a35029d676aa551cd00d042f4f65af39a89bf72464494321fafdf54191"
+    },
+    "module": {
+      "name": "QEMU x86_64 JavaScript runtime",
+      "url": "https://raw.githubusercontent.com/ktock/qemu-wasm-demo-images/b7c549b5e6f4c376f76483a03e983214421434ad/alpine-x86_64/out.js",
+      "bytes": 240815,
+      "sha256": "dab94140dc2ea847181ba47ae4cbd759728e551d8fd9ba9de409711ed25eddcc"
+    },
+    "kernel": {
+      "name": "Alpine x86_64 kernel",
+      "url": "https://raw.githubusercontent.com/ktock/qemu-wasm-demo-images/b7c549b5e6f4c376f76483a03e983214421434ad/alpine-x86_64/load-kernel.data",
+      "bytes": 11666432,
+      "sha256": "dd239e40daf62dfb34e1bedb281ee66a98ae9664935d0471c026726629a52c25"
+    },
+    "initramfs": {
+      "name": "Alpine x86_64 initramfs",
+      "url": "https://raw.githubusercontent.com/ktock/qemu-wasm-demo-images/b7c549b5e6f4c376f76483a03e983214421434ad/alpine-x86_64/load-initramfs.data",
+      "bytes": 9699151,
+      "sha256": "84fd4d99c66dc78302428ea381c14252aad2c604fc16021d19c7dd12679fc09c"
+    },
+    "rom": {
+      "name": "Alpine x86_64 rom",
+      "url": "https://raw.githubusercontent.com/ktock/qemu-wasm-demo-images/b7c549b5e6f4c376f76483a03e983214421434ad/alpine-x86_64/load-rom.data",
+      "bytes": 473088,
+      "sha256": "15de099e1363ceb13a31b9d11836337bab974f9460836449330b20c0534d06c9"
+    },
+    "rootfs": {
+      "name": "Alpine x86_64 rootfs",
+      "url": "https://raw.githubusercontent.com/ktock/qemu-wasm-demo-images/b7c549b5e6f4c376f76483a03e983214421434ad/alpine-x86_64/load-rootfs.data",
+      "bytes": 82611515,
+      "sha256": "e2facfffb787471a8784863fd8bf77dd87f098809a9b5cd54d9f082929596b3a"
+    }
+  },
+  "downloadBytes": 145490481,
+  "runtime": {
+    "architecture": "x86_64",
+    "machine": "pc",
+    "guestMemoryMiB": 512,
+    "sharedWasmMemoryMiB": 2300,
+    "virtualCpus": 1,
+    "rootBytes": 157286400,
+    "rootMode": "read-only base plus temporary writable overlay",
+    "stateCheckpointSupport": true,
+    "externalVolumeSupport": true,
+    "serialDevices": [
+      "ttyS0",
+      "ttyS1",
+      "ttyS2",
+      "ttyS3"
+    ],
+    "interactiveSerialPorts": [
+      1,
+      2,
+      3
+    ],
+    "checkpointCompatibility": "qemu@8.2.0-b7c549b5-uart4-v1",
+    "checkpointPayloadLimitBytes": 805306368,
+    "checkpointExternalAttachments": "Data volumes and evidence disks must be detached before a full VM checkpoint.",
+    "kernelCompatibilityArguments": [
+      "noapic",
+      "clocksource=tsc",
+      "8250.nr_uarts=4"
+    ],
+    "monitor": "Private HMP pipe on the main loop; fixed serialized execution, register-observation and checkpoint commands"
+  },
+  "guest": {
+    "distribution": "Alpine Linux 3.21.4",
+    "kernel": "6.12.43-0-virt",
+    "packageLicenseRecords": "/lib/apk/db/installed",
+    "packageSourceRecipes": "https://gitlab.alpinelinux.org/alpine/aports"
+  },
+  "integration": [
+    "Verified upstream module bytes are imported from a same-origin Blob URL; no arbitrary image-supplied JavaScript is accepted.",
+    "The browser worker and real-kernel Node tests share the same lifecycle dispatcher and engine. Node test bindings adapt only OS CPU enumeration and the WebSocket constructor; browser executable bytes remain unchanged.",
+    "Data-only package metadata is extracted from pinned preload scripts. Those preload scripts are not executed in the application.",
+    "A bounded concatenated newc archive overrides init to mount the root with a temporary overlay and remove exact upstream demo proxy/boot assumptions.",
+    "A private HMP pipe controls execution; the guest NIC is attached only to Terrarium NetworkPort.",
+    "Three additional private UART pipes provide independent interactive terminals while ttyS0 remains the agent control channel.",
+    "Two persistent raw VirtIO data disks use a bounded 64 KiB shared-memory mailbox. The emulator worker acknowledges each write only after the owning host VolumeSession transaction commits. Host and worker both enforce read-only attachments; cancellation wakes pending requests and teardown drains commits before releasing the volume locks.",
+    "Validated evidence archives become an independent read-only VirtIO disk. Both the QEMU device flag and the worker filesystem deny mutation; analyst mounting does not alter the source archive or its recorded checkpoint provenance.",
+    "Checkpoint capture attaches an application-generated private qcow2 state container only while guest CPUs are paused, uses QEMU savevm/loadvm and detaches it before execution resumes. Cold restore starts with -S and never sends guest input or cont before explicit resume.",
+    "The scoped, opt-in isolation service worker adds COOP/COEP to same-origin application documents and worker scripts without caching or external proxying."
+  ],
+  "localLoaderSource": {
+    "file": "vendor/qemu/qemu-system-x86_64.worker.upstream.js",
+    "bytes": 5772,
+    "sha256": "d5093486d6528279893f00b58b6ae75843f9bf687c91fca7e30bc07551a6761c",
+    "upstreamArtifactRepository": "https://github.com/ktock/qemu-wasm-demo-images",
+    "upstreamArtifactCommit": "b7c549b5e6f4c376f76483a03e983214421434ad",
+    "transform": "scripts/qemu-pthread-transform.mjs",
+    "transformId": "terrarium-browser-pthread-locate-file-v1",
+    "change": "Browser pthreads receive a bounded locateFile resolver before importing verified glue from a Blob URL. Only qemu-system-x86_64.wasm may resolve; instantiateWasm still uses the compiled module supplied by the parent. Node initialization is unchanged.",
+    "compatibility": "This loader URL-resolution repair changes no guest CPU, RAM, devices, allocation or checkpoint serialization. The legacy checkpoint identifier is retained; actual runtime parity must still be validated.",
+    "upstreamSha256": "8efab02a9cb5ee63ced22e9853bce74cbb895d15a5fb3d5139fef855c50f62ea",
+    "commentCleanup": "Removed a nonfunctional compiler TODO before applying the bounded browser URL hook; the MIT header is retained."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "terrarium.runtime-source-distribution/v1",
+  "availability": "The stable asset URL identifies the corresponding-source companion. Verify the complete size, SHA256 and closed membership after retrieval; this descriptor does not attest live availability or delivery state.",
+  "archive": {
+    "path": "terrarium-s2-runtime-corresponding-source.tar.gz",
+    "bytes": 301580245,
+    "sha256": "6dab3bfbf2a505007e090dc4b26698498d9a3b3d06b3851e84d4ca1177b0de59",
+    "url": "https://github.com/niklas-olsson/niklas-olsson.github.io/releases/download/runtime-sources-s2/terrarium-s2-runtime-corresponding-source.tar.gz",
+    "format": "gzip-compressed POSIX tar; regular files only",
+    "root": "terrarium-s2-runtime-corresponding-source/"
+  },
+  "inventory": {
+    "path": "public/runtime/qemu/source-archive-members.json",
+    "bytes": 128249,
+    "sha256": "a16076d59fdf0d07c4a0d8e5e233ca7b9280b300af8c21d6a5d5c4b2189204a8"
+  },
+  "closure": {
+    "path": "build/qemu/distribution/manifest.json",
+    "bytes": 161368,
+    "sha256": "68918a10dc8007e68fd36de1793dda873f7b6ffa7757629c6225bafc4fcc2153"
+  },
+  "sourceInputCount": 39,
+  "payloadMemberCount": 541,
+  "reconstruction": {
+    "guide": "docs/runtime-sources.md",
+    "commands": "build/qemu/README.md",
+    "verification": "python3 -B build/qemu/source_archive.py verify --archive \"$ARCHIVE\"",
+    "extraction": "After verification, extract into a fresh directory. Paths beneath the archive root mirror the public reconstruction kit; source-inputs/ contains unchanged upstream files.",
+    "compilerLimit": "Prebuilt locked SDK/LLVM/Binaryen and Alpine guest binaries are separate fetchable build inputs; complete source compiler bootstrap and historical kernel/firmware environment reconstruction are not claimed."
+  },
+  "identityMeaning": "New neutral source archive. Reacquired source bytes do not establish recovery of a historical whole-file archive or historical source delivery."
+}

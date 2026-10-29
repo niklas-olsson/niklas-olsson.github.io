@@ -1,0 +1,33 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.cache/
+
+# Local verification output and private release coordination.
+docs/validation/
+docs/decisions/
+docs/*-plan.md
+docs/*-progress.json
+SOURCE_COMMIT.txt
+
+# Private workspace metadata and local operation artifacts.
+.chatgpt-project.json
+.agents/
+.codex/
+.aws/
+__pycache__/
+*.py[cod]
+.rsync-tmp/
+docs/source-handoffs.md
+*RECOVERY*.md
+*HANDOFF*.md
+*BLOCKER*.md
+PREPARE-REPORT.md
+test-results.json
+output/playwright/
+.playwright-cli/

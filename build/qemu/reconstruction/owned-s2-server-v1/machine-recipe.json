@@ -1,0 +1,59 @@
+{
+  "schema": "terrarium.qemu-machine-recipe/v1",
+  "runtimeCompatibility": "qemu@8.2.0-terrarium-0ef7b4e-s2-server-v1",
+  "hardwareTarget": {
+    "guestMemoryMiB": 2048,
+    "virtualCpus": 2,
+    "reservedWasmMiB": 3584,
+    "translationCacheMiB": 500
+  },
+  "derivation": "Source recipe and compatibility identity changes before a fresh compile; no patched or reused binary artifacts.",
+  "wrapper": {
+    "file": "build-machine-runtime.py",
+    "sha256": "e7b2e0ea64073477a315e0f574e506348431b073b6bfc2e2e5ca199d830a6ae9"
+  },
+  "inputs": {
+    "build-runtime.py": {
+      "bytes": 28620,
+      "sha256": "3ef9718b0b8299d18cea2bb34639e026de8c2e8b62e37e86271419172ff3144b"
+    },
+    "runtime_build_support.py": {
+      "bytes": 14671,
+      "sha256": "827d5df131f23eb9b051def064ebe7661bf46b88806cbc31ba05bcead2971906"
+    },
+    "inputs.lock.json": {
+      "bytes": 8003,
+      "sha256": "5e5afb148ff24d2802801907511120bdc9ff2e1b580d1b1d4b84c9c75ea7cdbd"
+    },
+    "patches/glib-stable-runtime-paths.patch": {
+      "bytes": 1842,
+      "sha256": "0dcbbc97abde8e43581804f1dfc148ea9811e72f5b971bff37f832f846e5a6ce"
+    },
+    "patches/emscripten-proxy-context-lifetime.patch": {
+      "bytes": 1125,
+      "sha256": "b7e288932df00f55d71e0c49871cc9ee650fc6501c0e15de9926ebe808cf97a8"
+    }
+  },
+  "outputs": {
+    "build-runtime.py": {
+      "bytes": 28625,
+      "sha256": "fc0404ab5e8155c9401d6e94ad130ef58a9eb8241d38d88268b786d93d4231fa"
+    },
+    "runtime_build_support.py": {
+      "bytes": 14668,
+      "sha256": "ac49a69bba4f0ea046e11eec8d8e0e07edbe991ad2b81e29c05ed4f4811dd2db"
+    },
+    "inputs.lock.json": {
+      "bytes": 8221,
+      "sha256": "611d3282a635bc0dc04b8e76ab058917d25d7425728488b29562dcb7459983bc"
+    },
+    "patches/glib-stable-runtime-paths.patch": {
+      "bytes": 1842,
+      "sha256": "0dcbbc97abde8e43581804f1dfc148ea9811e72f5b971bff37f832f846e5a6ce"
+    },
+    "patches/emscripten-proxy-context-lifetime.patch": {
+      "bytes": 1125,
+      "sha256": "b7e288932df00f55d71e0c49871cc9ee650fc6501c0e15de9926ebe808cf97a8"
+    }
+  }
+}

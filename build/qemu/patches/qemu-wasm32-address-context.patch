@@ -1,0 +1,63 @@
+--- a/tcg/wasm32.c
++++ b/tcg/wasm32.c
+@@ -25,6 +25,7 @@
+ #include "exec/cpu_ldst.h"
+ #include "tcg/tcg-op.h"
+ #include "tcg/tcg-ldst.h"
++#include "tcg-internal.h"
+ #include <string.h>
+ #include <emscripten.h>
+ #include <emscripten/threading.h>
+@@ -41,7 +42,7 @@
+ EM_JS(int, instantiate_wasm, (), {
+         const memory_v = new DataView(HEAP8.buffer);
+ 
+-        const tb_ptr = memory_v.getInt32(Module.__wasm32_tb.tb_ptr_ptr, true);
++        const tb_ptr = memory_v.getUint32(Module.__wasm32_tb.tb_ptr_ptr, true);
+         const export_vec_size = memory_v.getInt32(tb_ptr + 4, true);
+         const export_vec_begin = tb_ptr + 4 + 4;
+ 
+@@ -227,16 +228,22 @@
+ 
+ int get_core_nums()
+ {
+-    return emscripten_num_logical_cores();
++    /* Translation vectors are indexed by guest TCG contexts, not host CPUs.
++     * Keep the bound executable in release builds compiled with NDEBUG. */
++    if (tcg_max_ctxs == 0 || tcg_max_ctxs > (INT_MAX - 12) / 8) {
++        fprintf(stderr, "Invalid Wasm TCG context capacity: %u\n", tcg_max_ctxs);
++        abort();
++    }
++    return (int)tcg_max_ctxs;
+ }
+ 
+ EM_JS(void, init_wasm32_js, (int tb_ptr_ptr, int cur_core_num, int to_remove_instance_ptr, int to_remove_instance_idx_ptr, int instance_garbage_collected_ptr), {
+         Module.__wasm32_tb = {
+-            tb_ptr_ptr: tb_ptr_ptr,
++            tb_ptr_ptr: tb_ptr_ptr >>> 0,
+             cur_core_num: cur_core_num,
+-            to_remove_instance_ptr: to_remove_instance_ptr,
+-            to_remove_instance_idx_ptr: to_remove_instance_idx_ptr,
+-            instance_garbage_collected_ptr: instance_garbage_collected_ptr,
++            to_remove_instance_ptr: to_remove_instance_ptr >>> 0,
++            to_remove_instance_idx_ptr: to_remove_instance_idx_ptr >>> 0,
++            instance_garbage_collected_ptr: instance_garbage_collected_ptr >>> 0,
+             inst_gc_registry: new FinalizationRegistry((i) => {
+                     if (i == "instance") {
+                         const memory_v = new DataView(HEAP8.buffer);
+@@ -250,8 +257,14 @@
+ void init_wasm32()
+ {
+     if (!initdone) {
++        all_cores_num = get_core_nums();
+         cur_core_num = qatomic_fetch_inc(&cur_core_num_max);
+-        all_cores_num = get_core_nums();
++        /* Fixed topology: never let a new thread index past the TB vectors. */
++        if (cur_core_num < 0 || cur_core_num >= all_cores_num) {
++            fprintf(stderr, "Wasm TCG context index %d exceeds capacity %d\n",
++                    cur_core_num, all_cores_num);
++            abort();
++        }
+         export_vec_off = 4 + 4 + cur_core_num * 4;
+         counter_vec_off = 4 + 4 + all_cores_num * 4 + 4 + cur_core_num * 4;
+         ctx.stack = (uint64_t*)malloc(TCG_STATIC_CALL_ARGS_SIZE + TCG_STATIC_FRAME_SIZE);

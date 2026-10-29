@@ -1,0 +1,15 @@
+.hardware-settings { display: grid; gap: 16px; }
+.hardware-settings .small-print, .hardware-settings .error-text { margin: 0; line-height: 1.55; }
+.hardware-settings-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.hardware-settings-grid label, .hardware-image-manager > label { display: grid; gap: 8px; color: var(--muted); font-size: 12px; }
+.hardware-settings-grid input, .hardware-settings-grid select, .hardware-image-manager > input { width: 100%; min-width: 0; }
+.hardware-image-identity { display: grid; gap: 7px; padding: 14px; border: 1px solid rgb(var(--border-rgb) / .18); border-radius: 8px; font-size: 12px; }
+.hardware-settings code { overflow-wrap: anywhere; }
+.hardware-image-manager { display: grid; gap: 12px; border-top: 1px solid rgb(var(--border-rgb) / .16); padding-top: 16px; }
+.hardware-image-manager h3 { margin: 0; font-size: 14px; }
+.hardware-image-actions, .hardware-operation { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.hardware-saved-image { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding: 12px 0; border-top: 1px solid rgb(var(--border-rgb) / .12); }
+.hardware-saved-image > div:first-child { display: grid; gap: 5px; min-width: 0; font-size: 12px; overflow-wrap: anywhere; }
+.hardware-saved-image span { color: var(--muted); }
+.hardware-settings .runtime-facts dd { overflow-wrap: anywhere; }
+@media (max-width: 560px) { .hardware-settings-grid { grid-template-columns: 1fr; } .hardware-saved-image { align-items: flex-start; } }

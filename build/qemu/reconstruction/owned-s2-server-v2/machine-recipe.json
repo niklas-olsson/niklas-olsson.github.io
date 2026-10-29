@@ -1,0 +1,106 @@
+{
+  "schema": "terrarium.qemu-machine-recipe/v1",
+  "runtimeCompatibility": "qemu@8.2.0-terrarium-0ef7b4e-s2-server-v2",
+  "hardwareTarget": {
+    "guestMemoryMiB": 2048,
+    "virtualCpus": 2,
+    "reservedWasmMiB": 3584,
+    "translationCacheMiB": 500
+  },
+  "qemuSourceCorrections": [
+    {
+      "files": [
+        {
+          "file": "tcg/wasm32.c",
+          "beforeSha256": "5e551e478a5ddd86e81964dd3fc3783150d22c1691a1f918290704550e8c433a",
+          "afterSha256": "2a612bd07d7aac3a220a72dd667726b63138741c25bd49dd46a9379a9b8fca44"
+        }
+      ],
+      "patch": "qemu-wasm32-address-context.patch",
+      "patchSha256": "4181b961c1e69a5df6d077737feb2c9ef9646bffbc91d2fb93dc0a520e3213d9",
+      "scope": "Unsigned Wasm32 address crossings and fixed guest TCG context capacity; no CPU hotplug or recycled-context support is claimed."
+    },
+    {
+      "files": [
+        {
+          "file": "hw/core/machine.c",
+          "beforeSha256": "657808003d666107b85afef98a9e1b3f1c77272cd2cca805ae072de23e950303",
+          "afterSha256": "44acc27e799a50282e66220725a3122c7fc850fdc903e8d68396665d4f2a46c3"
+        },
+        {
+          "file": "util/mmap-alloc.c",
+          "beforeSha256": "9ab54329e1298bbe32dc33d9d3efafd48364de6c97d74bc29a5db3a8adc0cea4",
+          "afterSha256": "6a33f5d74f417d4fc21d3e632d4d14118bf8931aae1bd4215aa90ff3fd4db063"
+        }
+      ],
+      "patch": "qemu-wasm32-segmented-ram.patch",
+      "patchSha256": "6dda5de0d181292450c6d1594d15f4ad973bc0fd4d1d193c0abf94a92ef6670c",
+      "scope": "Exactly 2 GiB aggregate PC RAM in two distinct 1 GiB anonymous RAMBlocks; retain libc's per-mapping bound and preserve mmap failure semantics."
+    }
+  ],
+  "derivation": "Exact source patch and recipe inputs before a fresh compile; no reused or rewritten binary artifacts.",
+  "wrapper": {
+    "file": "build-machine-runtime-v2.py",
+    "sha256": "54e9222f612cfaf7b7fc91f135f3343557491587f6149799b519095e6c58dc3a"
+  },
+  "inputs": {
+    "build-runtime.py": {
+      "bytes": 28620,
+      "sha256": "3ef9718b0b8299d18cea2bb34639e026de8c2e8b62e37e86271419172ff3144b"
+    },
+    "runtime_build_support.py": {
+      "bytes": 14671,
+      "sha256": "827d5df131f23eb9b051def064ebe7661bf46b88806cbc31ba05bcead2971906"
+    },
+    "inputs.lock.json": {
+      "bytes": 8003,
+      "sha256": "5e5afb148ff24d2802801907511120bdc9ff2e1b580d1b1d4b84c9c75ea7cdbd"
+    },
+    "patches/glib-stable-runtime-paths.patch": {
+      "bytes": 1842,
+      "sha256": "0dcbbc97abde8e43581804f1dfc148ea9811e72f5b971bff37f832f846e5a6ce"
+    },
+    "patches/emscripten-proxy-context-lifetime.patch": {
+      "bytes": 1125,
+      "sha256": "b7e288932df00f55d71e0c49871cc9ee650fc6501c0e15de9926ebe808cf97a8"
+    },
+    "patches/qemu-wasm32-address-context.patch": {
+      "bytes": 2765,
+      "sha256": "4181b961c1e69a5df6d077737feb2c9ef9646bffbc91d2fb93dc0a520e3213d9"
+    },
+    "patches/qemu-wasm32-segmented-ram.patch": {
+      "bytes": 2740,
+      "sha256": "6dda5de0d181292450c6d1594d15f4ad973bc0fd4d1d193c0abf94a92ef6670c"
+    }
+  },
+  "outputs": {
+    "build-runtime.py": {
+      "bytes": 30231,
+      "sha256": "04fe029970c6b1ca20e45aa7f8c91f3462f68fb4d60879159b135cd23182c9a9"
+    },
+    "runtime_build_support.py": {
+      "bytes": 14668,
+      "sha256": "4f7a428bf1951529b8dd496ad6a732eeeb2bca86a7d50cb73acf4d2e89941e15"
+    },
+    "inputs.lock.json": {
+      "bytes": 9698,
+      "sha256": "ab92f4c944bfece67f723d2aab2892a2adbc70b07ed76b201e8a9f84d2dbe81d"
+    },
+    "patches/glib-stable-runtime-paths.patch": {
+      "bytes": 1842,
+      "sha256": "0dcbbc97abde8e43581804f1dfc148ea9811e72f5b971bff37f832f846e5a6ce"
+    },
+    "patches/emscripten-proxy-context-lifetime.patch": {
+      "bytes": 1125,
+      "sha256": "b7e288932df00f55d71e0c49871cc9ee650fc6501c0e15de9926ebe808cf97a8"
+    },
+    "patches/qemu-wasm32-address-context.patch": {
+      "bytes": 2765,
+      "sha256": "4181b961c1e69a5df6d077737feb2c9ef9646bffbc91d2fb93dc0a520e3213d9"
+    },
+    "patches/qemu-wasm32-segmented-ram.patch": {
+      "bytes": 2740,
+      "sha256": "6dda5de0d181292450c6d1594d15f4ad973bc0fd4d1d193c0abf94a92ef6670c"
+    }
+  }
+}
