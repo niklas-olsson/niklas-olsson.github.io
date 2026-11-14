@@ -1,0 +1,73 @@
+TinyEMU 2019-12-21
+Copyright (c) 2016-2017 Fabrice Bellard
+MIT license: see MIT-LICENSE.txt in this directory.
+Source: https://bellard.org/tinyemu/tinyemu-2019-12-21.tar.gz
+The JavaScript and WebAssembly binaries are unmodified files from the
+author's jslinux-2019-12-21.tar.gz release.
+
+Included AES implementation (notice from TinyEMU aes.c):
+
+aes.c - integrated in QEMU by Fabrice Bellard from the OpenSSL project.
+rijndael-alg-fst.c, version 3.0 (December 2000)
+Optimised ANSI C code for the Rijndael cipher (now AES)
+Vincent Rijmen <vincent.rijmen@esat.kuleuven.ac.be>
+Antoon Bosselaers <antoon.bosselaers@esat.kuleuven.ac.be>
+Paulo Barreto <paulo.barreto@terra.com.br>
+
+This code is hereby placed in the public domain.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHORS ''AS IS'' AND ANY EXPRESS
+OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHORS OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Included SHA-256 implementation (notice from TinyEMU sha256.c):
+
+LibTomCrypt, modular cryptographic library -- Tom St Denis
+LibTomCrypt is a library that provides various cryptographic
+algorithms in a highly modular and flexible manner.
+The library is free for all purposes without any express
+guarantee it works.
+Tom St Denis, tomstdenis@gmail.com, http://libtom.org
+
+Guest software
+
+Linux, BusyBox, and the RISC-V boot loader are separate guest components.
+Their binaries are downloaded by the user's browser only after Boot and
+are not redistributed by this project. Exact immutable URLs, observed
+versions, byte lengths, SHA-256 checks, and available source references
+are recorded in provenance.json.
+
+Additional guest profiles
+
+Alpine Linux 3.24.3 and Debian GNU/Linux 13.7 slim are fetched from
+their official, immutable GitHub artifact commits on Boot. They are
+not bundled with the application. See guest-profiles.json for exact
+archive hashes, source/build metadata, and assembly details.
+
+Alpine packages retain the SPDX identifiers and source recipe commits
+in /lib/apk/db/installed. Debian package copyright/license files remain
+under /usr/share/doc/*/copyright. The images are collections of separately
+licensed software; the application and TinyEMU licenses do not replace
+those licenses.
+
+The Debian bootstrap copies two files from the verified Alpine archive
+into the guest's memory filesystem:
+- BusyBox 1.37.0-r31: GPL-2.0-only, aports source recipe commit
+  c3ef5d10e6ef6528852c51f0564963e2f8c1be19.
+- musl 1.2.6-r3 loader: MIT, aports source recipe commit
+  8f79d39391b46d6dbf1800fb68b8212a21d5ee2e.
+Source recipes, archive references, and patches:
+https://gitlab.alpinelinux.org/alpine/aports
+
+Application-owned init scripts, the bounded tar/9p assembler, and runtime
+adapters are Apache-2.0 integration code. They do not overwrite Debian's
+glibc, Bash, apt, or package database. Guest components remain subject to
+their own licenses if an operator chooses to redistribute a derived image.

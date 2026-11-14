@@ -1,0 +1,111 @@
+{
+  "schema": "terrarium.qemu-owned-bundle-provenance/v1",
+  "runtimeCompatibility": "qemu@8.2.0-terrarium-0ef7b4e-s2-server-v3",
+  "runtime": {
+    "architecture": "x86_64",
+    "guestMemoryMiB": 2048,
+    "sharedWasmMemoryMiB": 3584,
+    "virtualCpus": 2,
+    "translationCacheMiB": 500,
+    "serialPorts": 4,
+    "memoryLayout": "split-2x1024m-ram-blocks-v1",
+    "memoryBackendsMiB": [
+      1024,
+      1024
+    ],
+    "sockets": 2,
+    "coresPerSocket": 1,
+    "threadsPerCore": 1,
+    "memoryHotplug": false
+  },
+  "guest": {
+    "architecture": "x86_64",
+    "distribution": "Alpine Linux 3.21.4",
+    "kernel": "6.12.38-0-virt",
+    "rootBytes": 157286400
+  },
+  "downloadedAssets": {
+    "module": {
+      "file": "out.js",
+      "bytes": 169827,
+      "sha256": "6dafedb87255cf3e3e5bfbd18c6f4a76a8f4a18a33f17bb34c8c04f5511b8c0e"
+    },
+    "kernel": {
+      "file": "../owned-s1-candidate-v2/load-kernel.data",
+      "bytes": 11658240,
+      "sha256": "7e5c9e26d8dd032c8a1fa469f3bf8c2ea507fb3a486a8cb85fa2000005bc5cdc"
+    },
+    "initramfs": {
+      "file": "../owned-s1-candidate-v2/load-initramfs.data",
+      "bytes": 9110518,
+      "sha256": "fe9a01e2a4adbe35a9c524aca87a5aa9970a0c0e6a0d8d823b83bc2ffe31648b"
+    },
+    "rom": {
+      "file": "../owned-s1-candidate-v2/load-rom.data",
+      "bytes": 473088,
+      "sha256": "15de099e1363ceb13a31b9d11836337bab974f9460836449330b20c0534d06c9"
+    },
+    "rootfs": {
+      "file": "../owned-s1-candidate-v2/load-rootfs.data",
+      "bytes": 15861107,
+      "sha256": "564ad6278fbb057946854e70bf3c1b98a221152900743128b0fd3fdc2dabe8f9"
+    },
+    "wasm": {
+      "file": "qemu-system-x86_64.wasm",
+      "bytes": 11527698,
+      "sha256": "664f7bc0062bd702212c5a04bffda3c910fe51ed2c757cb0773ec25bfc280e86"
+    }
+  },
+  "localAssets": [
+    {
+      "file": "../owned-s1-candidate-v2/alpine-packages.json",
+      "bytes": 1081467,
+      "sha256": "b68081cd549109fa54a2d838186a847163ebff71290999c84cef11f3890841db"
+    },
+    {
+      "file": "../owned-s1-candidate-v2/qemu-system-x86_64.worker.js",
+      "bytes": 3271,
+      "sha256": "960199074fdc92f0aa6c0665b6f15dff461fad6605743c5bb0c620438379a62c"
+    }
+  ],
+  "localLoaderSource": {
+    "file": "vendor/qemu/owned-s1-candidate-v2/qemu-system-x86_64.worker.original.js",
+    "bytes": 2773,
+    "sha256": "9bc24c5cde340cd0b3c2e7363a3b4d2963e0780b706aac4068577fd33005f2ff",
+    "transform": "scripts/qemu-pthread-transform.mjs",
+    "transformId": "terrarium-owned-pthread-locate-file-v1",
+    "change": "Separate exact-hash deterministic adaptation of the owned generated bootstrap. Browser-only bounded Wasm URL resolution; Node initialization is unchanged."
+  },
+  "notices": [
+    "../../Emscripten-LICENSE.txt",
+    "../../QEMU-LICENSE.txt",
+    "../../QEMU-COPYING.txt"
+  ],
+  "status": "built-unqualified",
+  "qualification": "Catalog registration and byte verification do not establish release qualification.",
+  "runtimeSource": {
+    "repository": "https://github.com/ktock/qemu-wasm",
+    "revision": "0ef7b4e2814b231705d8371dd7997f5b72e70baf",
+    "patches": {
+      "glib-stable-runtime-paths.patch": "0dcbbc97abde8e43581804f1dfc148ea9811e72f5b971bff37f832f846e5a6ce",
+      "emscripten-proxy-context-lifetime.patch": "b7e288932df00f55d71e0c49871cc9ee650fc6501c0e15de9926ebe808cf97a8",
+      "qemu-wasm32-address-context.patch": "4181b961c1e69a5df6d077737feb2c9ef9646bffbc91d2fb93dc0a520e3213d9",
+      "qemu-wasm32-segmented-ram.patch": "6dda5de0d181292450c6d1594d15f4ad973bc0fd4d1d193c0abf94a92ef6670c",
+      "libffi-wasm32-unsigned-addresses.patch": "52170a1e3880a45918af59c38164a4f6f875a1efa66b147f51202fca2fb4d5f1"
+    },
+    "recipeSha256": "f2885e74d3b4d3cf3d5c18f75aba805b7f21a702088f94e6797296f4589d4a0a",
+    "inputLockSha256": "537581136eac106713436ba25f12ebff19b7021484a89340ad83515e3490a545"
+  },
+  "guestSource": {
+    "manifestSource": {
+      "repository": "terrarium-owned-guest",
+      "commit": "alpine3.21.4-linux6.12.38-terrarium-s1-candidate-v2"
+    },
+    "recipeSha256": "c204765b8bc59c2f79f50d3d9a2d8c439adf24315d1eae920cdb0a65de1b6280",
+    "sourceRootfsSha256": "2c5d1929a3e1f856a37114bef4357d90290a4e1fe933d12e3067ffd612e8c642"
+  },
+  "limitations": [
+    "Runtime execution, browser compatibility and persistence require independent verification.",
+    "Historical runtimes retain separate compatibility identifiers; checkpoints are never relabelled."
+  ]
+}
