@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "package": {
+    "name": "TinyEMU",
+    "version": "2019-12-21",
+    "license": "MIT",
+    "author": "Fabrice Bellard",
+    "homepage": "https://bellard.org/tinyemu/",
+    "source": "https://bellard.org/tinyemu/tinyemu-2019-12-21.tar.gz",
+    "sourceArchiveSha256": "be8351f2121819b3172fcedce5cb1826fa12c87da1b7ed98f269d3e802a05555",
+    "binaryRelease": "https://bellard.org/tinyemu/jslinux-2019-12-21.tar.gz",
+    "binaryReleaseSha256": "c57e46f8eab6656cd9ce5c7e2825230177919b147c8c2befd1f327bbdf254088"
+  },
+  "redistributedEmulatorAssets": [
+    {
+      "file": "riscvemu64-wasm.js",
+      "bytes": 65788,
+      "sha256": "1637ea50d0a5b4cb138eac6a02d8654c696e5315b7d5c1c78b63e8e2b29fd601"
+    },
+    {
+      "file": "riscvemu64-wasm.wasm",
+      "bytes": 220054,
+      "sha256": "4e4d5d60713bab852a1e95b673fbb26d805010b8acbffce9a860e4f3fb88196b"
+    }
+  ],
+  "guestAssetPolicy": "Fetched only on Boot. Original firmware/kernel/disk files use an immutable CORS mirror hash-matched to the author release; Alpine and Debian archives use their official immutable GitHub artifact commits and published digests. No guest binaries are included in the repository or build.",
+  "externalGuestAssets": [
+    {
+      "file": "bbl64.bin",
+      "role": "Berkeley RISC-V boot loader",
+      "url": "https://raw.githubusercontent.com/losfair/jslinux-wstunnel/bbc541599d2ce6d55a63f9fbd40a00da3f1b00b9/bbl64.bin",
+      "bytes": 53786,
+      "sha256": "293610cea7af6c75e4a8337e16c0d62834becbf31ffd9cca35e0c211602349db",
+      "sourceCommit": "ac2c910b18c3e36cfd85080472e78ad2fe484325",
+      "patches": "https://bellard.org/tinyemu/diskimage-linux-riscv-2018-09-23.tar.gz"
+    },
+    {
+      "file": "kernel-riscv64.bin",
+      "role": "64-bit RISC-V Linux kernel",
+      "url": "https://raw.githubusercontent.com/losfair/jslinux-wstunnel/bbc541599d2ce6d55a63f9fbd40a00da3f1b00b9/kernel-riscv64.bin",
+      "bytes": 3979556,
+      "sha256": "65ca70a6560a730396ab61488d1cf46089b32da5af7e535e03c180cd5bcc8e75",
+      "observedKernelVersion": "4.15.0-00049-ga3b1e7a-dirty",
+      "sourceCommit": "a3b1e7acc6a181e04e9a943942084395df4498dd",
+      "patchesAndConfig": "https://bellard.org/tinyemu/diskimage-linux-riscv-2018-09-23.tar.gz"
+    },
+    {
+      "file": "root-riscv64.bin",
+      "role": "4 MiB writable ext2 root disk with BusyBox 1.21.1",
+      "url": "https://raw.githubusercontent.com/losfair/jslinux-wstunnel/bbc541599d2ce6d55a63f9fbd40a00da3f1b00b9/root-riscv64.bin",
+      "bytes": 4194304,
+      "sha256": "04c4e67351934c3b81602698adf56f39961f53fe630f2920ad15bc9c12da971b",
+      "sourceBundleStatus": "Exact root image build recipe and complete corresponding source bundle not established; not redistributed by Terrarium."
+    },
+    {
+      "file": "alpine-minirootfs-3.24.3-riscv64.tar.gz",
+      "role": "Alpine Linux 3.24.3 RISC-V64 root filesystem archive",
+      "url": "https://raw.githubusercontent.com/alpinelinux/docker-alpine/5aec467fb81238bae9441eea2edb000655d7044f/riscv64/alpine-minirootfs-3.24.3-riscv64.tar.gz",
+      "bytes": 3450383,
+      "sha256": "9714553757e7bf645eff5dcc52bdd206f358a7bed77874842567852e8326a51d",
+      "sourceRepository": "https://github.com/alpinelinux/docker-alpine/tree/5aec467fb81238bae9441eea2edb000655d7044f/riscv64",
+      "license": "Per-package SPDX identifiers are retained in /lib/apk/db/installed; this is a collection, not one license.",
+      "sourceAvailability": "The installed APK database records package versions, licenses, source package names, and exact Alpine aports commits. Upstream APKBUILD recipes identify source archives and patches."
+    },
+    {
+      "file": "rootfs.tar.gz",
+      "role": "Debian GNU/Linux 13.7 slim RISC-V64 root filesystem archive",
+      "url": "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/64a870d7670389268c0d44ec0e0a4392d36d579c/trixie/slim/oci/blobs/rootfs.tar.gz",
+      "bytes": 28345669,
+      "sha256": "a81ae23cfcc12d03cee9e3704fa559c027af15fefe8c60924add8fd17e4c98c1",
+      "sourceRepository": "https://github.com/debuerreotype/docker-debian-artifacts/tree/64a870d7670389268c0d44ec0e0a4392d36d579c/trixie/slim",
+      "license": "Per-package copyright and license files are retained under /usr/share/doc/*/copyright; this is a collection, not one license.",
+      "sourceAvailability": "The pinned artifact repository contains package versions, Debian release metadata, debuerreotype metadata, and snapshot.debian.org source/archive references for the image build date."
+    }
+  ],
+  "runtimeConfiguration": {
+    "architecture": "riscv64",
+    "guestMemoryMiB": 128,
+    "console": "/dev/hvc0",
+    "snapshots": false,
+    "pause": "Dedicated-worker timer suspension, verified with live guest output",
+    "network": "VirtIO Ethernet frames supplied to the page-scoped NetworkPort; no hardcoded relay",
+    "rootFilesystems": [
+      "Original 4 MiB ext2 disk",
+      "Alpine and Debian gzip tar roots assembled into memory-backed VirtIO 9p by filesystem.js"
+    ]
+  },
+  "guestLimitations": [
+    "Every RISC-V64 profile still uses the historical Linux 4.15 kernel; newer userspace versions do not imply a newer kernel.",
+    "Only the original BusyBox 1.21.1 profile lacks glibc NSS DNS libraries. Alpine and Debian native DNS and HTTP are verified on a nondefault VPC subnet.",
+    "The webget helper uses the selected subnet gateway and requires World mode with Browser bridge; no global proxy environment is installed.",
+    "RISC-V64 profiles expose one console, no VM checkpoints, and no Kubernetes/container stack. RISC-V64 is not x86-64.",
+    "Package manager version execution is verified. Arbitrary package installations and guest TLS relay integration are not verified."
+  ],
+  "profileManifest": "guest-profiles.json"
+}

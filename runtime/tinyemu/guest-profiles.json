@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "policy": "Guest binaries are fetched into browser memory on Boot, checked against exact byte lengths and SHA-256, and never included in this static distribution. Image assembly code is Apache-2.0; guest components retain their package licenses.",
+  "sharedKernel": {
+    "version": "4.15.0-00049-ga3b1e7a-dirty",
+    "architecture": "riscv64",
+    "manifest": "provenance.json",
+    "limitation": "A modern userspace does not upgrade this historical kernel. No Kubernetes/container compatibility is asserted."
+  },
+  "assembly": {
+    "implementation": "public/runtime/tinyemu/filesystem.js",
+    "transport": "TinyEMU in-memory VirtIO 9p",
+    "compressedArchiveLimitBytes": 67108864,
+    "expandedTarLimitBytes": 201326592,
+    "individualFileLimitBytes": 67108864,
+    "entryLimit": 20000,
+    "filesystemQuotaBytes": 268435456,
+    "changes": [
+      "Validate gzip/tar boundaries, header checksums, paths, and hard links; no extraction into the host filesystem.",
+      "Generate a deterministic TinyEMU file list and serve every original file from the verified archive in memory.",
+      "Install the application-owned /terrarium-init and /etc/inittab to boot a supervised interactive hvc0 shell without a full service manager.",
+      "The host runtime configures the selected VPC/subnet address and installs its application-owned webget helper before running user initialization."
+    ]
+  },
+  "profiles": [
+    {
+      "id": "riscv64",
+      "name": "Original BusyBox RISC-V64",
+      "rootFormat": "ext2",
+      "rootManifest": "provenance.json",
+      "observedUserspace": "BusyBox 1.21.1",
+      "nativeDnsVerified": false
+    },
+    {
+      "id": "alpine-riscv64",
+      "name": "Alpine Linux 3.24.3 RISC-V64",
+      "rootFormat": "tar+gzip",
+      "rootfs": {
+        "url": "https://raw.githubusercontent.com/alpinelinux/docker-alpine/5aec467fb81238bae9441eea2edb000655d7044f/riscv64/alpine-minirootfs-3.24.3-riscv64.tar.gz",
+        "bytes": 3450383,
+        "sha256": "9714553757e7bf645eff5dcc52bdd206f358a7bed77874842567852e8326a51d",
+        "officialChecksum": "https://dl-cdn.alpinelinux.org/alpine/v3.24/releases/riscv64/alpine-minirootfs-3.24.3-riscv64.tar.gz.sha256",
+        "sourceRepository": "https://github.com/alpinelinux/docker-alpine/tree/5aec467fb81238bae9441eea2edb000655d7044f/riscv64",
+        "license": "Per-package SPDX identifiers are retained in /lib/apk/db/installed; this is a collection, not one license.",
+        "sourceAvailability": "The installed APK database records package versions, licenses, source package names, and exact Alpine aports commits. Upstream APKBUILD recipes identify source archives and patches."
+      },
+      "observedTools": {
+        "busybox": "1.37.0-r31",
+        "apk-tools": "3.0.8-r0",
+        "musl": "1.2.6-r3"
+      },
+      "nativeDnsVerified": true,
+      "nativeHttpVerified": true,
+      "packageInstallationVerified": false,
+      "guestTlsIntegrationVerified": false
+    },
+    {
+      "id": "debian-riscv64",
+      "name": "Debian GNU/Linux 13.7 slim RISC-V64",
+      "rootFormat": "tar+gzip",
+      "rootfs": {
+        "url": "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/64a870d7670389268c0d44ec0e0a4392d36d579c/trixie/slim/oci/blobs/rootfs.tar.gz",
+        "bytes": 28345669,
+        "sha256": "a81ae23cfcc12d03cee9e3704fa559c027af15fefe8c60924add8fd17e4c98c1",
+        "officialOciManifest": "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/64a870d7670389268c0d44ec0e0a4392d36d579c/trixie/slim/oci/blobs/image-manifest.json",
+        "sourceRepository": "https://github.com/debuerreotype/docker-debian-artifacts/tree/64a870d7670389268c0d44ec0e0a4392d36d579c/trixie/slim",
+        "packageManifest": "https://raw.githubusercontent.com/debuerreotype/docker-debian-artifacts/64a870d7670389268c0d44ec0e0a4392d36d579c/trixie/slim/rootfs.manifest",
+        "buildEpoch": 1793059200,
+        "buildDate": "2026-10-27T00:00:00Z",
+        "debuerreotypeVersion": "0.17",
+        "license": "Per-package copyright and license files are retained under /usr/share/doc/*/copyright; this is a collection, not one license.",
+        "sourceAvailability": "The pinned artifact repository contains package versions, Debian release metadata, debuerreotype metadata, and snapshot.debian.org source/archive references for the image build date."
+      },
+      "bootUtilities": {
+        "archive": "Same verified official Alpine rootfs used by alpine-riscv64",
+        "copiedFiles": [
+          {
+            "from": "bin/busybox",
+            "to": "usr/lib/terrarium/busybox",
+            "license": "GPL-2.0-only",
+            "version": "1.37.0-r31",
+            "aportsCommit": "c3ef5d10e6ef6528852c51f0564963e2f8c1be19"
+          },
+          {
+            "from": "lib/ld-musl-riscv64.so.1",
+            "to": "usr/lib/ld-musl-riscv64.so.1",
+            "license": "MIT",
+            "version": "1.2.6-r3",
+            "aportsCommit": "8f79d39391b46d6dbf1800fb68b8212a21d5ee2e"
+          }
+        ],
+        "purpose": "Supply a small init/mount implementation and ifconfig, route, ping, nslookup, nc, wget, and httpd applets. The Debian shell, glibc, GNU tools, package database, and apt are preserved."
+      },
+      "observedTools": { "bash": "5.2.37", "apt": "3.0.3", "glibc": "2.41" },
+      "nativeDnsVerified": true,
+      "nativeHttpVerified": true,
+      "packageInstallationVerified": false,
+      "guestTlsIntegrationVerified": false
+    }
+  ],
+  "commonVerifiedBehavior": [
+    "Real RISC-V64 Linux kernel boot through the shipped TinyEmuRuntime and worker",
+    "Init scripts and observed exit status",
+    "Writable guest files and Unicode command I/O",
+    "Native DNS and HTTP on subnet 10.42.7.0/24 using gateway 10.42.7.1 for both modern profiles",
+    "webget uses the assigned gateway, not a hardcoded default subnet",
+    "Pause and resume"
+  ],
+  "reproduce": "node --experimental-strip-types scripts/smoke-profiles.mjs"
+}
